@@ -1,3 +1,24 @@
+# Visual Studio specific files
+.vs/
+*.vcxproj.user
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Debug,Release]/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+
+# Others
+.ipch/
+
 # Prerequisites
 *.d
 

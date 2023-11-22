@@ -1,0 +1,24 @@
+{
+    "id": 1,
+    "materials": [
+        {
+            "diopter": 5.150000095367432,
+            "name": "Diopter oval glasses",
+            "type": "glasses",
+            "width": 2.5
+        },
+        {
+            "diopter": 1.75,
+            "name": "Diopter circle glasses",
+            "type": "glasses",
+            "width": 0.5
+        }
+    ],
+    "numberOfMaterials": 2,
+    "supplier": {
+        "bulstat": "12121212",
+        "location": "Bulgaria, Pazardzhik",
+        "name": "GTS Computers",
+        "phone": "0886626226"
+    }
+}

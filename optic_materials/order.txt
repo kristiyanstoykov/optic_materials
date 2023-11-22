@@ -1,0 +1,14 @@
+ID: 1
+Number of materials: 2
+Optic material: Diopter oval glasses
+Type: glasses
+Width: 2.5
+Diopter: 5.15
+Optic material: Diopter circle glasses
+Type: glasses
+Width: 0.5
+Diopter: 1.75
+Suplier: GTS Computers
+Bulstat: 12121212
+Phone: 0886626226
+Location: Bulgaria, Pazardzhik
