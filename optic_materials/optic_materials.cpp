@@ -8,67 +8,153 @@
 
 using namespace std;
 
-string add(string a)
-{
-    string b = a;
-
-    return b;
-}
-
-int main()
-{
-    //string bulstat, name, location, phone;
-    //cout << "bulstat:\n";
-    //getline(cin, bulstat);
-    //cout << "name:\n";
-    //getline(cin, name);
-    //cout << "location:\n";
-    //getline(cin, location);
-    //cout << "phone:\n";
-    //getline(cin, phone);
-
-    Supplier supplier("12121212", "GTS Computers", "Bulgaria, Pazardzhik", "0886626226");
-
-    Optic_Material material("glasses", 2.50f, 5.15f, "Diopter oval glasses");
-    Optic_Material material_2("glasses", 0.50f, 1.75f, "Diopter circle glasses");
-    //cout << material;
-
-    vector<Optic_Material> materials;
-
-    materials.push_back(material);
-    materials.push_back(material_2);
-
-    Order order(1, materials, supplier);
-
-    cout << order;
-
-    cout << "\n\n";
-    cout << "Start write to JSON file -----------\n";
-    ofstream file_order("order.json");
-    if (!file_order) {
-        cout << "File could not be created!\n";
+void load_order(Order &order) {
+    ifstream in("order.txt");
+    if (!in) {
+        cout << "File could not be opened!\n";
+        return;
     }
 
-    json j_out;
-    order.to_json(j_out);
-    file_order << j_out.dump(4);
-    file_order.close();
+    in >> order;
+    in.close();
+}
 
-    cout << "End write to JSON file   -----------\n";
-
+void load_order_json(Order& order) {
     cout << "Start read to JSON file -----------\n";
     ifstream in("order.json");
     if (!in) {
-        cout << "File can not be openned!\n";
+        cout << "File could not be opened!\n";
+        return;
     }
+
     json j;
     in >> j;
+    order.from_json(j);
 
-    Order order_in;
-    order_in.from_json(j);
     in.close();
-    cout << order_in << endl;
-    cout << "End read to JSON file   -----------\n";
+}
+
+void save_order(Order order) {
+    ofstream out("order.txt");
+    if (!out) {
+        cout << "File could not be opened or created!\n";
+        return;
+    }
+
+    out << order;
+    out.close();
+}
+
+void save_order_json(Order order) {
+    ofstream out("order.json");
+    if (!out) {
+        cout << "File could not be opened or created!\n";
+        return;
+    }
+
+    json j;
+    order.to_json(j);
+    out << j.dump(4);
+    out.close();
+}
+
+void enter_order(Order& order) {
+
+    int order_id;
+    cout << "Enter order id number: ";
+    cin >> order_id;
+
+    int num_mat;
+    vector<Optic_Material> materials;
+    cout << "Enter number of materials to add: ";
+    cin >> num_mat;
+
+    for (int i = 0; i < num_mat; i++)
+    {
+        string type, name;
+        double width, diopter;
+        cout << "Material " << i + 1 << ": \n";
+        cout << "Enter type\n";
+        getline(cin, type);
+        cout << "Enter name:\n";
+        getline(cin, name);
+        cout << "Enter width:\n";
+        cin >> width;
+        cout << "Enter diopter:\n";
+        cin >> diopter;
+
+        materials.push_back(Optic_Material(type, width, diopter, name));
+    }
+
+    string bulstat, name, location, phone;
+    cout << "Enter Supplier\n";
+    cout << "Enter bulstat:\n";
+    getline(cin, bulstat);
+    cout << "Enter name:\n";
+    getline(cin, name);
+    cout << "Enter location:\n";
+    getline(cin, location);
+    cout << "Enter phone:\n";
+    getline(cin, phone);
+
+    Supplier supplier("12121212", "GTS Computers", "Bulgaria, Pazardzhik", "0886626226");
+
+    cout << "Order successfully added";
+
+    Order order(order_id, materials, supplier);
+}
+
+void display_menu(Order &order) {
+
+    cout << "Optic materials\n";
+    cout << "1. Load order from file.\n";
+    cout << "2. Enter new order\n";
+    cout << "3. Edit order\n";
+    cout << "4. Save order to file\n";
+    cout << "5. View current order\n";
+    cout << "0. Exit\n";
+
+    int choice;
+    cout << "Enter your choice: ";
+    cin >> choice;
+
+    switch (choice)
+    {
+    case 1:
+        load_order(order);
+        //load_order_json(order);
+        // TODO Load orders to file
+        break;
+    case 2:
+        enter_order(order);
+        break;
+    case 3:
+        // TODO Edit order
+        break;
+    case 4:
+        save_order(order);
+        save_order_json(order);
+        break;
+    case 5:
+        // TODO View current orders to file
+        break;
+    case 0:
+        // TODO Exit
+        break;
+    default:
+        break;
+    }
+}
+
+
+int main() {
+    
+    Order order;
+    display_menu(order);
+
+    cout << "Test --------------";
+    cout << order;
+    cout << "End test ----------";
 
     return 0;
 }
