@@ -31,6 +31,15 @@ Supplier::Supplier(std::string bulstat, std::string name, std::string location, 
     this->profit_margin = profit_margin;
 }
 
+// Copy constructor
+Supplier::Supplier(const Supplier& sup):
+    bulstat(sup.bulstat),
+    name(sup.name),
+    location(sup.location),
+    phone(sup.phone),
+    profit_margin(sup.profit_margin)
+{}
+
 std::string Supplier::getBulstat()
 {
     return this->bulstat;

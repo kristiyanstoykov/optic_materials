@@ -17,6 +17,7 @@ private:
 public:
     Supplier();
     Supplier(std::string bulstat, std::string name, std::string location, std::string phone, double profit_margin);
+    Supplier(const Supplier &sup);
     std::string getBulstat();
     void setBulstat(std::string bulstat);
     std::string getName();
