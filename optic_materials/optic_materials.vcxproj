@@ -24,7 +24,7 @@
     <ProjectGuid>{6a776cd9-0deb-4c4e-9fdd-c5294bf1ed05}</ProjectGuid>
     <RootNamespace>testoptics</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>test_optics</ProjectName>
+    <ProjectName>optic_materials</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -131,6 +131,7 @@
     <ClCompile Include="base.cpp" />
     <ClCompile Include="optic_material.cpp" />
     <ClCompile Include="order.cpp" />
+    <ClCompile Include="orders.cpp" />
     <ClCompile Include="supplier.cpp" />
     <ClCompile Include="optic_materials.cpp" />
   </ItemGroup>
@@ -138,6 +139,7 @@
     <ClInclude Include="base.h" />
     <ClInclude Include="optic_material.h" />
     <ClInclude Include="order.h" />
+    <ClInclude Include="orders.h" />
     <ClInclude Include="supplier.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
