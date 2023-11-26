@@ -12,6 +12,7 @@ void load_order(Order &order) {
     ifstream in("order.txt");
     if (!in) {
         cout << "File could not be opened!\n";
+        in.close();
         return;
     }
 
