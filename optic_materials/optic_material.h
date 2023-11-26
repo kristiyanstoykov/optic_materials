@@ -19,6 +19,7 @@ private:
 public:
     Optic_Material();
     Optic_Material(std::string type, double width, double diopter, std::string name, double price);
+    Optic_Material(const Optic_Material &om);
     std::string getType();
     void setType(std::string type);
     double getWidth();

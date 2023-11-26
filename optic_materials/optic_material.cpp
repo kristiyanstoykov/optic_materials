@@ -36,6 +36,15 @@ Optic_Material::Optic_Material(std::string type, double width, double diopter, s
     this->price = price;
 }
 
+// Copy constructor
+Optic_Material::Optic_Material(const Optic_Material& om):
+    type(om.type),
+    width(om.width),
+    diopter(om.diopter),
+    name(om.name),
+    price(om.price)
+{}
+
 std::string Optic_Material::getType()
 {
     return this->type;
