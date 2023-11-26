@@ -12,10 +12,11 @@ private:
     std::string name;
     std::string location;
     std::string phone;
+    double profit_margin;
 
 public:
     Supplier();
-    Supplier(std::string bulstat, std::string name, std::string location, std::string phone);
+    Supplier(std::string bulstat, std::string name, std::string location, std::string phone, double profit_margin);
     std::string getBulstat();
     void setBulstat(std::string bulstat);
     std::string getName();
@@ -24,6 +25,9 @@ public:
     void setLocation(std::string location);
     std::string getPhone();
     void setPhone(std::string phone);
+    double getProfitMargin();
+    void setProfitMargin(double getProfitMargin);
+
 
     ostream& print(ostream& output) const override;
     istream& input(istream& input) override;

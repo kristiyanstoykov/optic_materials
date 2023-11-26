@@ -2,7 +2,7 @@
 
 Supplier::Supplier() {}
 
-Supplier::Supplier(std::string bulstat, std::string name, std::string location, std::string phone)
+Supplier::Supplier(std::string bulstat, std::string name, std::string location, std::string phone, double profit_margin)
 {
     if (bulstat.empty())
     {
@@ -28,6 +28,7 @@ Supplier::Supplier(std::string bulstat, std::string name, std::string location, 
     this->name = name;
     this->location = location;
     this->phone = phone;
+    this->profit_margin = profit_margin;
 }
 
 std::string Supplier::getBulstat()
@@ -70,12 +71,24 @@ void Supplier::setPhone(std::string phone)
     this->phone = phone;
 }
 
+double Supplier::getProfitMargin()
+{
+    return this->profit_margin;
+}
+
+void Supplier::setProfitMargin(double profit_margin)
+{
+    this->profit_margin = profit_margin;
+}
+
+
 ostream &Supplier::print(ostream &output) const
 {
     output << "Suplier: " << this->name << endl;
     output << "Bulstat: " << this->bulstat << endl;
     output << "Phone: " << this->phone << endl;
     output << "Location: " << this->location << endl;
+    output << "Profit margin: " << this->profit_margin << endl;
 
     return output;
 }
@@ -96,6 +109,9 @@ istream &Supplier::input(istream &input)
     getline(input, line);
     this->location = line.substr(line.find(": ") + 2);
 
+    getline(input, line);
+    this->profit_margin = stod(line.substr(line.find(": ") + 2));
+
     return input;
 }
 
@@ -105,7 +121,8 @@ void Supplier::to_json(json& j) const
         {"name", this->name},
         {"bulstat", this->bulstat},
         {"phone", this->phone},
-        {"location", this->location}
+        {"location", this->location},
+        {"profit_margin", this->profit_margin}
     };
 }
 
@@ -115,4 +132,5 @@ void Supplier::from_json(json& j)
     this->bulstat = j.at("bulstat").get<string>();
     this->phone = j.at("phone").get<string>();
     this->location = j.at("location").get<string>();
+    this->profit_margin = j.at("profit_margin").get<double>();
 }
