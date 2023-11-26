@@ -3,8 +3,6 @@
 #include <memory>
 #include <fstream>
 #include "order.h"
-//#include "supplier.h"
-//#include "optic_material.h"
 
 using namespace std;
 
@@ -59,6 +57,21 @@ void save_order_json(Order order) {
     out.close();
 }
 
+void enter_supplier(Supplier &supplier) {
+    string bulstat, name, location, phone;
+    cout << "Enter Supplier\n";
+    cout << "Enter bulstat:\n";
+    getline(cin, bulstat);
+    cout << "Enter name:\n";
+    getline(cin, name);
+    cout << "Enter location:\n";
+    getline(cin, location);
+    cout << "Enter phone:\n";
+    getline(cin, phone);
+
+    supplier = Supplier("12121212", "GTS Computers", "Bulgaria, Pazardzhik", "0886626226", 9.99f);
+}
+
 void enter_order(Order& order) {
 
     int order_id;
@@ -91,6 +104,7 @@ void enter_order(Order& order) {
         materials.push_back(material);
     }
 
+    // TODO move this to another function for entering suppliers and saving to files
     string bulstat, name, location, phone;
     cout << "Enter Supplier\n";
     cout << "Enter bulstat:\n";
@@ -112,11 +126,14 @@ void enter_order(Order& order) {
 void display_menu(Order &order) {
 
     cout << "Optic materials\n";
-    cout << "1. Load order from file.\n";
+    cout << "1. Load orders, suppliers and materials from file.\n";
     cout << "2. Enter new order\n";
-    cout << "3. Edit order\n";
-    cout << "4. Save order to file\n";
-    cout << "5. View current order\n";
+    cout << "3. Enter new supplier\n";
+    cout << "4. Enter new optic material\n";
+    cout << "5. View orders\n";
+    cout << "6. View suppliers\n";
+    cout << "7. View optic materials\n";
+    cout << "8. Save orders, suppliers and materials to file\n";
     cout << "0. Exit\n";
 
     int choice;
@@ -126,40 +143,69 @@ void display_menu(Order &order) {
     switch (choice)
     {
     case 1:
+        // TODO Load orders, suppliers and materials from file
         load_order(order);
         //load_order_json(order);
-        // TODO Load orders to file
         break;
     case 2:
         enter_order(order);
         break;
     case 3:
-        // TODO Edit order
+        // TODO Enter new supplier
         break;
     case 4:
+        // TODO Enter new optic material
+        break;
+    case 5:
+        // TODO View orders ( to screen )
+        break;
+    case 6:
+        // TODO View suppliers ( to screen )
+        break;
+    case 7:
+        // TODO View optic materials ( to screen )
+        break;
+    case 8:
+        // TODO Save orders, suppliers and materials to file
         save_order(order);
         save_order_json(order);
         break;
-    case 5:
-        // TODO View current orders to file
-        break;
     case 0:
-        // TODO Exit
+        // TODO Exit. Add promt that says if orders ... not saved are lost forever
         break;
     default:
         break;
     }
 }
 
+void test(vector<Supplier> &suppliers) {
+
+    Supplier supplier1("2222222", "GTS Computers", "Bulgaria, Pazardzhik", "0886626226", 9.99f);
+    Supplier supplier2("3333333", "GTS Computers", "Bulgaria, Pazardzhik", "0886626226", 9.99f);
+    Supplier supplier3("4444444", "GTS Computers", "Bulgaria, Pazardzhik", "0886626226", 9.99f);
+
+    suppliers.push_back(supplier1);
+    suppliers.push_back(supplier2);
+    suppliers.push_back(supplier3);
+}
 
 int main() {
     
-    Order order;
-    display_menu(order);
+    vector<Order> orders;
+    vector<Supplier> suppliers;
+    //display_menu(orders, suppliers);
 
     cout << "Test --------------";
-    cout << order;
+    //cout << order;
     cout << "End test ----------";
+
+    test(suppliers);
+
+    for (const auto& sup : suppliers) {
+        cout << "Start-----------\n";
+        cout << sup;
+        cout << "End  -----------\n";
+    }
 
     return 0;
 }
