@@ -19,9 +19,7 @@ public:
     int getId();
     vector<Optic_Material> getMaterials();
     Supplier getSupplier();
-
-    ostream& printSupplier(ostream& out);
-    ostream& printOpticMaterials(ostream& out);
+    double getTotal();
 
     ostream& print(ostream& output) const override;
     istream& input(istream& input) override;

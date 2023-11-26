@@ -29,22 +29,16 @@ Supplier Order::getSupplier()
     return this->supplier;
 }
 
-ostream& Order::printSupplier(ostream& out)
-{
-    this->supplier.print(out);
-    return out;
-}
+double Order::getTotal() {
+    double total = 0;
 
-ostream& Order::printOpticMaterials(ostream& out)
-{
-
-    out << this->materials.size();
-    for (int i = 0; i < this->materials.size(); ++i)
-    {
-        materials[i].print(out);
+    for (auto& material : this->materials) {
+        total += material.getPrice();
     }
 
-    return out;
+    total *= 100 / this->supplier.getProfitMargin();
+
+    return total;
 }
 
 ostream& Order::print(ostream& output) const
