@@ -72,7 +72,7 @@ void enter_order(Order& order) {
     for (int i = 0; i < num_mat; i++)
     {
         string type, name;
-        double width, diopter;
+        double width, diopter, price;
         cout << "Material " << i + 1 << ": \n";
         cout << "Enter type\n";
         getline(cin, type);
@@ -82,8 +82,12 @@ void enter_order(Order& order) {
         cin >> width;
         cout << "Enter diopter:\n";
         cin >> diopter;
+        cout << "Enter price:\n";
+        cin >> price;
 
-        materials.push_back(Optic_Material(type, width, diopter, name));
+        Optic_Material material(type, width, diopter, name, price);
+
+        materials.push_back(material);
     }
 
     string bulstat, name, location, phone;
@@ -97,11 +101,11 @@ void enter_order(Order& order) {
     cout << "Enter phone:\n";
     getline(cin, phone);
 
-    Supplier supplier("12121212", "GTS Computers", "Bulgaria, Pazardzhik", "0886626226");
+    Supplier supplier("12121212", "GTS Computers", "Bulgaria, Pazardzhik", "0886626226", 9.99f);
 
     cout << "Order successfully added";
 
-    Order order(order_id, materials, supplier);
+    order = Order(order_id, materials, supplier);
 }
 
 void display_menu(Order &order) {
