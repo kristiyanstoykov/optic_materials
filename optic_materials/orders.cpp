@@ -15,7 +15,7 @@ ostream& Orders::print(ostream& output) const {
     output << "Total Orders: " << orderList.size() << "\n";
     for (const auto& order : orderList) {
         output << "---------------------------------\n";
-        output << order; // Assuming Order has an overloaded operator<< for printing
+        output << order;
         output << "---------------------------------\n";
     }
     return output;
@@ -28,7 +28,7 @@ istream& Orders::input(istream& input) {
         if (line.empty()) continue; // Skip empty lines or use them as delimiters
 
         Order order;
-        input >> order; // Assuming Order has an overloaded operator>> for input
+        input >> order;
         orderList.push_back(order);
 
         // Skip until the next order or end of file
@@ -44,7 +44,7 @@ void Orders::to_json(json& j) const {
     // Serialize each order
     for (const auto& order : orderList) {
         json orderJson;
-        order.to_json(orderJson); // Assuming Order has a to_json method
+        order.to_json(orderJson);
         j.push_back(orderJson);
     }
 }
