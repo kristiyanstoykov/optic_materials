@@ -3,6 +3,7 @@
 #include <memory>
 #include <fstream>
 #include "order.h"
+#include "orders.h"
 
 using namespace std;
 
@@ -18,9 +19,9 @@ void load_order(Order &order) {
     in.close();
 }
 
-void load_order_json(Order& order) {
+void load_orders_json(Orders& orders) {
     cout << "Start read to JSON file -----------\n";
-    ifstream in("order.json");
+    ifstream in("orders.json");
     if (!in) {
         cout << "File could not be opened!\n";
         return;
@@ -28,9 +29,10 @@ void load_order_json(Order& order) {
 
     json j;
     in >> j;
-    order.from_json(j);
-
     in.close();
+
+    orders.from_json(j);
+
 }
 
 void save_order(Order order) {
@@ -44,7 +46,7 @@ void save_order(Order order) {
     out.close();
 }
 
-void save_order_json(Order order) {
+void save_orders_json(Orders orders) {
     ofstream out("order.json");
     if (!out) {
         cout << "File could not be opened or created!\n";
@@ -52,7 +54,7 @@ void save_order_json(Order order) {
     }
 
     json j;
-    order.to_json(j);
+    orders.to_json(j);
     out << j.dump(4);
     out.close();
 }
