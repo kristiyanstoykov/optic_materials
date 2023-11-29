@@ -2,12 +2,13 @@
 #include <string>
 #include <memory>
 #include <fstream>
-#include "order.h"
 #include "orders.h"
+#include "suppliers.h"
+#include "optic_materials.h"
 
 using namespace std;
 
-void load_order(Order &order) {
+void load_orders(Orders &orders) {
     ifstream in("order.txt");
     if (!in) {
         cout << "File could not be opened!\n";
@@ -15,7 +16,7 @@ void load_order(Order &order) {
         return;
     }
 
-    in >> order;
+    in >> orders;
     in.close();
 }
 
@@ -74,6 +75,45 @@ void enter_supplier(Supplier &supplier) {
     supplier = Supplier("12121212", "GTS Computers", "Bulgaria, Pazardzhik", "0886626226", 9.99f);
 }
 
+void enter_material(Optic_Material& material) {
+
+    string type, name;
+    double width, diopter, price;
+    cout << "Material " << i + 1 << ": \n";
+    cout << "Enter type\n";
+    getline(cin, type);
+    while (type.empty()) {
+        cout << "Material type cannot be empty!\nEnter type:\n";
+        getline(cin, type);
+    }
+    cout << "Enter name:\n";
+    getline(cin, name);
+    while (name.empty()) {
+        cout << "Material name cannot be empty!\nEnter name:\n";
+        getline(cin, type);
+    }
+    cout << "Enter width:\n";
+    cin >> width;
+    while (width <= 0) {
+        cout << "Material width cannot be 0 or less than 0!\nEnter width:\n";
+        cin >> width;
+    }
+    cout << "Enter diopter:\n";
+    cin >> diopter;
+    while (diopter == 0) {
+        cout << "Material diopter cannot be 0!\nEnter width:\n";
+        cin >> diopter;
+    }
+    cout << "Enter price:\n";
+    cin >> price;
+    while (price < 0) {
+        cout << "Material price cannot be less than 0!\nEnter width:\n";
+        cin >> price;
+    }
+
+    material = Optic_Material(type, width, diopter, name, price);
+}
+
 void enter_order(Order& order) {
 
     int order_id;
@@ -125,7 +165,7 @@ void enter_order(Order& order) {
     order = Order(order_id, materials, supplier);
 }
 
-void display_menu(Order &order) {
+void display_menu(Orders &orders, Suppliers& supplier, Optic_Materials& materials) {
 
     cout << "Optic materials\n";
     cout << "1. Load orders, suppliers and materials from file.\n";
@@ -146,11 +186,11 @@ void display_menu(Order &order) {
     {
     case 1:
         // TODO Load orders, suppliers and materials from file
-        load_order(order);
+        load_orders(orders);
         //load_order_json(order);
         break;
     case 2:
-        enter_order(order);
+        enter_orders(orders);
         break;
     case 3:
         // TODO Enter new supplier
@@ -170,44 +210,37 @@ void display_menu(Order &order) {
     case 8:
         // TODO Save orders, suppliers and materials to file
         save_order(order);
-        save_order_json(order);
+        //save_order_json(order);
         break;
     case 0:
-        // TODO Exit. Add promt that says if orders ... not saved are lost forever
+        // TODO Exit. Add prompt that says if orders ... not saved are lost forever
         break;
     default:
         break;
     }
 }
 
-void test(vector<Supplier> &suppliers) {
+void test(Suppliers& suppliers) {
 
     Supplier supplier1("2222222", "GTS Computers", "Bulgaria, Pazardzhik", "0886626226", 9.99f);
     Supplier supplier2("3333333", "GTS Computers", "Bulgaria, Pazardzhik", "0886626226", 9.99f);
     Supplier supplier3("4444444", "GTS Computers", "Bulgaria, Pazardzhik", "0886626226", 9.99f);
 
-    suppliers.push_back(supplier1);
-    suppliers.push_back(supplier2);
-    suppliers.push_back(supplier3);
+    suppliers.addSupplier(supplier1);
+    suppliers.addSupplier(supplier2);
+    suppliers.addSupplier(supplier3);
 }
 
 int main() {
     
-    vector<Order> orders;
-    vector<Supplier> suppliers;
-    //display_menu(orders, suppliers);
+    Orders orders;
+    Suppliers suppliers;
+    Optic_Materials materials;
+    //display_menu(orders, suppliers, materials);
 
-    cout << "Test --------------";
-    //cout << order;
-    cout << "End test ----------";
-
+    cout << "Test supplers --------------\n";
     test(suppliers);
-
-    for (const auto& sup : suppliers) {
-        cout << "Start-----------\n";
-        cout << sup;
-        cout << "End  -----------\n";
-    }
+    cout << suppliers;
 
     return 0;
 }
