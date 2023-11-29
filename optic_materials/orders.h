@@ -11,7 +11,7 @@ using json = nlohmann::json;
 
 class Orders : public Base{
 private:
-    vector<Order> orderList;
+    vector<Order> orders;
 
 public:
     // Constructor
