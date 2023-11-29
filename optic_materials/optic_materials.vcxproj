@@ -130,17 +130,21 @@
   <ItemGroup>
     <ClCompile Include="base.cpp" />
     <ClCompile Include="optic_material.cpp" />
+    <ClCompile Include="optic_materials.cpp" />
     <ClCompile Include="order.cpp" />
     <ClCompile Include="orders.cpp" />
     <ClCompile Include="supplier.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="suppliers.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base.h" />
     <ClInclude Include="optic_material.h" />
+    <ClInclude Include="optic_materials.h" />
     <ClInclude Include="order.h" />
     <ClInclude Include="orders.h" />
     <ClInclude Include="supplier.h" />
+    <ClInclude Include="suppliers.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

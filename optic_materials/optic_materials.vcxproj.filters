@@ -33,6 +33,12 @@
     <ClCompile Include="orders.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="suppliers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="optic_materials.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base.h">
@@ -48,6 +54,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="orders.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="suppliers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="optic_materials.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
