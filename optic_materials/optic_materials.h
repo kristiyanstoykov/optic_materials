@@ -19,10 +19,14 @@ public:
     // Constructor
     Optic_Materials() = default;
 
+    int getSize() const;
+
     void addOpticMaterial(const Optic_Material& optic_material);
-    vector<Optic_Material> getOpticMaterial();
+    vector<Optic_Material> getOpticMaterials();
+    Optic_Material getOpticMaterialByIndex(int index) const;
 
     ostream& print(ostream& output) const override;
+    void print_on_one_line() const;
     istream& input(istream& input) override;
     void to_json(json& j) const override;
     void from_json(json& j) override;

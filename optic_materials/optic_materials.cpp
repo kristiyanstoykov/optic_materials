@@ -5,9 +5,23 @@ void Optic_Materials::addOpticMaterial(const Optic_Material& optic_material) {
     this->optic_materials.push_back(optic_material);
 }
 
+int Optic_Materials::getSize() const
+{
+    return (int) this->optic_materials.size();
+}
+
 // Method to get all suppliers
-vector<Optic_Material> Optic_Materials::getOpticMaterial() {
+vector<Optic_Material> Optic_Materials::getOpticMaterials() {
     return this->optic_materials;
+}
+
+Optic_Material Optic_Materials::getOpticMaterialByIndex(int index) const {
+    if (index >= 0 && index < optic_materials.size()) {
+        return optic_materials[index];
+    }
+    else {
+        throw std::out_of_range("Index is out of range for optic materials vector.");
+    }
 }
 
 ostream& Optic_Materials::print(ostream& output) const {
@@ -18,13 +32,26 @@ ostream& Optic_Materials::print(ostream& output) const {
     return output;
 }
 
+
+void Optic_Materials::print_on_one_line() const {
+    cout << "Optic materials:\n";
+    int i = 0;
+    for (auto& optic_material : this->optic_materials) {
+        cout << i + 1 << ": " << optic_material.getName() << " "
+            << optic_material.getType() << " w:" << optic_material.getWidth()
+            << " d: " << optic_material.getDiopter()
+            << " p: " << optic_material.getPrice() << '\n';
+        i++;
+    }
+}
+
 istream& Optic_Materials::input(istream& input) {
     this->optic_materials.clear();
     string line;
     getline(input, line);
-    int order_size = stoi(line.substr(line.find(": ") + 2));
+    int materials_size = stoi(line.substr(line.find(": ") + 2));
 
-    for (int i = 0; i < order_size; ++i)
+    for (int i = 0; i < materials_size; ++i)
     {
         Optic_Material optic_material;
         input >> optic_material;
