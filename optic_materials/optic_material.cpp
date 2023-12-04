@@ -36,16 +36,7 @@ Optic_Material::Optic_Material(std::string type, double width, double diopter, s
     this->price = price;
 }
 
-// Copy constructor
-Optic_Material::Optic_Material(const Optic_Material& om):
-    type(om.type),
-    width(om.width),
-    diopter(om.diopter),
-    name(om.name),
-    price(om.price)
-{}
-
-std::string Optic_Material::getType()
+std::string Optic_Material::getType() const
 {
     return this->type;
 }
@@ -55,7 +46,7 @@ void Optic_Material::setType(std::string type)
     this->type = type;
 }
 
-std::string Optic_Material::getName()
+std::string Optic_Material::getName() const
 {
     return this->name;
 }
@@ -65,7 +56,7 @@ void Optic_Material::setName(std::string name)
     this->name = name;
 }
 
-double Optic_Material::getDiopter()
+double Optic_Material::getDiopter() const
 {
     return this->diopter;
 }
@@ -75,7 +66,7 @@ void Optic_Material::setDiopter(double diopter)
     this->diopter = diopter;
 }
 
-double Optic_Material::getWidth()
+double Optic_Material::getWidth() const
 {
     return this->width;
 }
@@ -85,7 +76,7 @@ void Optic_Material::setWidth(double width)
     this->width = width;
 }
 
-double Optic_Material::getPrice()
+double Optic_Material::getPrice() const
 {
     return this->price;
 }
