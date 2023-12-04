@@ -21,6 +21,10 @@ public:
 
     void addSupplier(const Supplier& supplier);
     vector<Supplier> getSuppliers();
+    Supplier getSupplierByIndex(int index) const;
+    int getSize() const;
+
+    void print_on_one_line() const;
 
     ostream& print(ostream& output) const override;
     istream& input(istream& input) override;

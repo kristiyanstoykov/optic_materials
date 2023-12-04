@@ -31,16 +31,7 @@ Supplier::Supplier(std::string bulstat, std::string name, std::string location, 
     this->profit_margin = profit_margin;
 }
 
-// Copy constructor
-Supplier::Supplier(const Supplier& sup):
-    bulstat(sup.bulstat),
-    name(sup.name),
-    location(sup.location),
-    phone(sup.phone),
-    profit_margin(sup.profit_margin)
-{}
-
-std::string Supplier::getBulstat()
+std::string Supplier::getBulstat() const
 {
     return this->bulstat;
 }
@@ -50,7 +41,7 @@ void Supplier::setBulstat(std::string bulstat)
     this->bulstat = bulstat;
 }
 
-std::string Supplier::getName()
+std::string Supplier::getName() const
 {
     return this->name;
 }
@@ -60,7 +51,7 @@ void Supplier::setName(std::string name)
     this->name = name;
 }
 
-std::string Supplier::getLocation()
+std::string Supplier::getLocation() const
 {
     return this->location;
 }
@@ -70,7 +61,7 @@ void Supplier::setLocation(std::string location)
     this->location = location;
 }
 
-std::string Supplier::getPhone()
+std::string Supplier::getPhone() const
 {
     return this->phone;
 }
@@ -80,7 +71,7 @@ void Supplier::setPhone(std::string phone)
     this->phone = phone;
 }
 
-double Supplier::getProfitMargin()
+double Supplier::getProfitMargin() const
 {
     return this->profit_margin;
 }
@@ -89,7 +80,6 @@ void Supplier::setProfitMargin(double profit_margin)
 {
     this->profit_margin = profit_margin;
 }
-
 
 ostream &Supplier::print(ostream &output) const
 {

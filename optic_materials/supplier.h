@@ -17,16 +17,16 @@ private:
 public:
     Supplier();
     Supplier(std::string bulstat, std::string name, std::string location, std::string phone, double profit_margin);
-    Supplier(const Supplier &sup);
-    std::string getBulstat();
+    //Supplier(const Supplier &sup);
+    std::string getBulstat() const;
     void setBulstat(std::string bulstat);
-    std::string getName();
+    std::string getName() const;
     void setName(std::string name);
-    std::string getLocation();
+    std::string getLocation() const;
     void setLocation(std::string location);
-    std::string getPhone();
+    std::string getPhone() const;
     void setPhone(std::string phone);
-    double getProfitMargin();
+    double getProfitMargin() const;
     void setProfitMargin(double getProfitMargin);
 
 
