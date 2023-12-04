@@ -14,6 +14,11 @@ Order::Order(int id, vector<Optic_Material> materials, Supplier supplier)
     this->supplier = supplier;
 }
 
+void Order::setId(int id)
+{
+    this->id = id;
+}
+
 int Order::getId()
 {
     return this->id;
@@ -24,9 +29,17 @@ vector<Optic_Material> Order::getMaterials()
     return this->materials;
 }
 
+void Order::addMaterial(const Optic_Material& material) {
+    this->materials.push_back(material);
+}
+
 Supplier Order::getSupplier()
 {
     return this->supplier;
+}
+
+void Order::addSupplier(const Supplier& supplier) {
+    this->supplier = supplier;
 }
 
 double Order::getTotal() {
@@ -81,19 +94,19 @@ void Order::to_json(json& j) const
     j = json{
         {"id", id},
         {"numberOfMaterials", materials.size()},
-        {"materials", json::array()} // Start with an empty array
+        {"materials", json::array()}
     };
 
     // Serialize each material
     for (const auto& material : materials) {
         json materialJson;
-        material.to_json(materialJson); // Assuming Optic_Material has a to_json method
+        material.to_json(materialJson);
         j["materials"].push_back(materialJson);
     }
 
     // Serialize supplier
     json supplierJson;
-    supplier.to_json(supplierJson); // Assuming Supplier has a to_json method
+    supplier.to_json(supplierJson);
     j["supplier"] = supplierJson;
 }
 

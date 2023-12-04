@@ -16,8 +16,11 @@ private:
 public:
     Order();
     Order(int id, vector<Optic_Material> materials, Supplier supplier);
+    void setId(int id);
     int getId();
     vector<Optic_Material> getMaterials();
+    void addMaterial(const Optic_Material& material);
+    void addSupplier(const Supplier& supplier);
     Supplier getSupplier();
     double getTotal();
 
