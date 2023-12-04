@@ -9,7 +9,7 @@
 using namespace std;
 
 void load_orders(Orders &orders) {
-    ifstream in("order.txt");
+    ifstream in("orders.txt");
     if (!in) {
         cout << "File could not be opened!\n";
         in.close();
@@ -21,7 +21,6 @@ void load_orders(Orders &orders) {
 }
 
 void load_orders_json(Orders& orders) {
-    cout << "Start read to JSON file -----------\n";
     ifstream in("orders.json");
     if (!in) {
         cout << "File could not be opened!\n";
@@ -36,19 +35,19 @@ void load_orders_json(Orders& orders) {
 
 }
 
-void save_order(Order order) {
-    ofstream out("order.txt");
+void save_orders(Orders orders) {
+    ofstream out("orders.txt");
     if (!out) {
         cout << "File could not be opened or created!\n";
         return;
     }
 
-    out << order;
+    out << orders;
     out.close();
 }
 
 void save_orders_json(Orders orders) {
-    ofstream out("order.json");
+    ofstream out("orders.json");
     if (!out) {
         cout << "File could not be opened or created!\n";
         return;
@@ -60,27 +59,157 @@ void save_orders_json(Orders orders) {
     out.close();
 }
 
-void enter_supplier(Supplier &supplier) {
+void load_suppliers(Suppliers& suppliers) {
+    ifstream in("suppliers.txt");
+    if (!in) {
+        cout << "File could not be opened!\n";
+        in.close();
+        return;
+    }
+
+    in >> suppliers;
+    in.close();
+}
+
+void load_suppliers_json(Suppliers& suppliers) {
+    ifstream in("suppliers.json");
+    if (!in) {
+        cout << "File could not be opened!\n";
+        return;
+    }
+
+    json j;
+    in >> j;
+    in.close();
+
+    suppliers.from_json(j);
+
+}
+
+void save_suppliers(Suppliers suppliers) {
+    ofstream out("suppliers.txt");
+    if (!out) {
+        cout << "File could not be opened or created!\n";
+        return;
+    }
+
+    out << suppliers;
+    out.close();
+}
+
+void save_suppliers_json(Suppliers suppliers) {
+    ofstream out("suppliers.json");
+    if (!out) {
+        cout << "File could not be opened or created!\n";
+        return;
+    }
+
+    json j;
+    suppliers.to_json(j);
+    out << j.dump(4);
+    out.close();
+}
+
+void load_materials(Optic_Materials& materials) {
+    ifstream in("materials.txt");
+    if (!in) {
+        cout << "File could not be opened!\n";
+        in.close();
+        return;
+    }
+
+    in >> materials;
+    in.close();
+}
+
+void load_materials_json(Optic_Materials& materials) {
+    cout << "Start read to JSON file -----------\n";
+    ifstream in("materials.json");
+    if (!in) {
+        cout << "File could not be opened!\n";
+        return;
+    }
+
+    json j;
+    in >> j;
+    in.close();
+
+    materials.from_json(j);
+
+}
+
+void save_materials(Optic_Materials materials) {
+    ofstream out("materials.txt");
+    if (!out) {
+        cout << "File could not be opened or created!\n";
+        return;
+    }
+
+    out << materials;
+    out.close();
+}
+
+void save_materials_json(Optic_Materials materials) {
+    ofstream out("materials.json");
+    if (!out) {
+        cout << "File could not be opened or created!\n";
+        return;
+    }
+
+    json j;
+    materials.to_json(j);
+    out << j.dump(4);
+    out.close();
+}
+
+Supplier enter_supplier() {
     string bulstat, name, location, phone;
+    double profit_margin;
+    cin.clear();
+    cin.ignore();
     cout << "Enter Supplier\n";
     cout << "Enter bulstat:\n";
     getline(cin, bulstat);
+    while (bulstat.empty()) {
+        cout << "Supplier bullstat cannot be empty!\nEnter bulstat:\n";
+        getline(cin, bulstat);
+    }
     cout << "Enter name:\n";
     getline(cin, name);
+    while (name.empty()) {
+        cout << "Supplier name cannot be empty!\nEnter name:\n";
+        getline(cin, name);
+    }
     cout << "Enter location:\n";
     getline(cin, location);
+    while (location.empty()) {
+        cout << "Supplier location cannot be empty!\nEnter location:\n";
+        getline(cin, location);
+    }
     cout << "Enter phone:\n";
     getline(cin, phone);
+    while (phone.empty()) {
+        cout << "Supplier phone cannot be empty!\nEnter phone:\n";
+        getline(cin, phone);
+    }
+    cout << "Enter profit margin (%):\n";
+    cin >> profit_margin;
+    while (profit_margin < 0) {
+        cout << "Supplier profit margin cannot be less than 0!\nEnter profit margin:\n";
+        getline(cin, phone);
+    }
 
-    supplier = Supplier("12121212", "GTS Computers", "Bulgaria, Pazardzhik", "0886626226", 9.99f);
+    Supplier supplier(bulstat, name, location, phone, profit_margin);
+    return supplier;
 }
 
-void enter_material(Optic_Material& material) {
+Optic_Material enter_material() {
 
     string type, name;
     double width, diopter, price;
-    cout << "Material " << i + 1 << ": \n";
-    cout << "Enter type\n";
+    cin.clear();
+    cin.ignore();
+    cout << "Enter type:\n";
     getline(cin, type);
     while (type.empty()) {
         cout << "Material type cannot be empty!\nEnter type:\n";
@@ -111,61 +240,59 @@ void enter_material(Optic_Material& material) {
         cin >> price;
     }
 
-    material = Optic_Material(type, width, diopter, name, price);
+    Optic_Material material(type, width, diopter, name, price);
+
+    return material;
 }
 
-void enter_order(Order& order) {
+void enter_order(Orders& orders, Optic_Materials materials, Suppliers suppliers) {
+
+    orders.addOrder(Order());
 
     int order_id;
     cout << "Enter order id number: ";
     cin >> order_id;
+    orders.addIdToLastOrder(order_id);
 
-    int num_mat;
-    vector<Optic_Material> materials;
+    int materials_to_add;
     cout << "Enter number of materials to add: ";
-    cin >> num_mat;
+    cin >> materials_to_add;
 
-    for (int i = 0; i < num_mat; i++)
+    materials.print_on_one_line();
+
+    for (int i = 0; i < materials_to_add; i++)
     {
-        string type, name;
-        double width, diopter, price;
-        cout << "Material " << i + 1 << ": \n";
-        cout << "Enter type\n";
-        getline(cin, type);
-        cout << "Enter name:\n";
-        getline(cin, name);
-        cout << "Enter width:\n";
-        cin >> width;
-        cout << "Enter diopter:\n";
-        cin >> diopter;
-        cout << "Enter price:\n";
-        cin >> price;
+        int num;
+        cout << "Choose material number to add to order:\n";
+        cin >> num;
 
-        Optic_Material material(type, width, diopter, name, price);
+        while (num <= 0 || num > materials.getSize())
+        {
+            cout << "Incorrect number!\nChoose material number to add to order:\n";
+            cin >> num;
+        }
 
-        materials.push_back(material);
+        orders.addMaterialToLastOrder(materials.getOpticMaterialByIndex(num - 1));
+
     }
 
-    // TODO move this to another function for entering suppliers and saving to files
-    string bulstat, name, location, phone;
-    cout << "Enter Supplier\n";
-    cout << "Enter bulstat:\n";
-    getline(cin, bulstat);
-    cout << "Enter name:\n";
-    getline(cin, name);
-    cout << "Enter location:\n";
-    getline(cin, location);
-    cout << "Enter phone:\n";
-    getline(cin, phone);
+    suppliers.print_on_one_line();
+    int num;
+    cout << "Choose supplier number to add to order:\n";
+    cin >> num;
 
-    Supplier supplier("12121212", "GTS Computers", "Bulgaria, Pazardzhik", "0886626226", 9.99f);
+    while (num <= 0 || num > suppliers.getSize())
+    {
+        cout << "Incorrect number!\nChoose material number to add to order:\n";
+        cin >> num;
+    }
+
+    orders.addSupplierToLastOrder(suppliers.getSupplierByIndex(num - 1));
 
     cout << "Order successfully added";
-
-    order = Order(order_id, materials, supplier);
 }
 
-void display_menu(Orders &orders, Suppliers& supplier, Optic_Materials& materials) {
+void display_menu(Orders &orders, Suppliers& suppliers, Optic_Materials& materials) {
 
     cout << "Optic materials\n";
     cout << "1. Load orders, suppliers and materials from file.\n";
@@ -186,38 +313,57 @@ void display_menu(Orders &orders, Suppliers& supplier, Optic_Materials& material
     {
     case 1:
         // TODO Load orders, suppliers and materials from file
-        load_orders(orders);
-        //load_order_json(order);
+        //load_orders(orders);
+        load_orders_json(orders);
+        load_suppliers(suppliers);
+        //load_orders_json(suppliers);
+        load_materials(materials);
+        //load_orders_json(materials);
         break;
     case 2:
-        enter_orders(orders);
+        enter_order(orders, materials, suppliers);
         break;
     case 3:
-        // TODO Enter new supplier
+        // Enter new supplier
+        suppliers.addSupplier(enter_supplier());
         break;
     case 4:
-        // TODO Enter new optic material
+        // Enter new optic material
+        materials.addOpticMaterial(enter_material());
+        cout << "Material added successfully\n";
         break;
     case 5:
-        // TODO View orders ( to screen )
+        // View orders ( to screen )
+        cout << orders;
         break;
     case 6:
-        // TODO View suppliers ( to screen )
+        // View suppliers ( to screen )
+        cout << suppliers;
         break;
     case 7:
-        // TODO View optic materials ( to screen )
+        // View optic materials ( to screen )
+        cout << materials;
         break;
     case 8:
-        // TODO Save orders, suppliers and materials to file
-        save_order(order);
-        //save_order_json(order);
+        // Save orders, suppliers and materials to file
+        save_orders(orders);
+        save_orders_json(orders);
+        save_suppliers(suppliers);
+        save_suppliers_json(suppliers);
+        save_materials(materials);
+        save_materials_json(materials);
         break;
     case 0:
         // TODO Exit. Add prompt that says if orders ... not saved are lost forever
+        cout << "Goodbye!";
+        return;
         break;
     default:
         break;
     }
+
+    display_menu(orders, suppliers, materials);
+
 }
 
 void test(Suppliers& suppliers) {
@@ -236,11 +382,7 @@ int main() {
     Orders orders;
     Suppliers suppliers;
     Optic_Materials materials;
-    //display_menu(orders, suppliers, materials);
-
-    cout << "Test supplers --------------\n";
-    test(suppliers);
-    cout << suppliers;
+    display_menu(orders, suppliers, materials);
 
     return 0;
 }
