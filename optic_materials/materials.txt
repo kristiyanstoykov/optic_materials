@@ -1,0 +1,21 @@
+Total optic materials: 4
+Optic material: Glasses
+Type: Plastic
+Width: 4.54
+Diopter: 3.25
+Price: 25.36
+Optic material: Glasses
+Type: Glass
+Width: 6.21
+Diopter: 3.25
+Price: 52.36
+Optic material: Glasses
+Type: Metal
+Width: 5.12
+Diopter: 3.75
+Price: 78.98
+Optic material: Night
+Type: Glass
+Width: 1.25
+Diopter: 9.85
+Price: 236.56

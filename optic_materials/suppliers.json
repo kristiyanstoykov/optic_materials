@@ -1,0 +1,16 @@
+[
+    {
+        "bulstat": "123",
+        "location": "PZ",
+        "name": "GTS",
+        "phone": "0884955590",
+        "profit_margin": 35.0
+    },
+    {
+        "bulstat": "555",
+        "location": "Sofia",
+        "name": "OptClinic",
+        "phone": "0886626226",
+        "profit_margin": 22.0
+    }
+]

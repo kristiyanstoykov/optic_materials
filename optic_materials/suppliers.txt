@@ -1,0 +1,11 @@
+Total Suppliers: 2
+Suplier: GTS
+Bulstat: 123
+Phone: 0884955590
+Location: PZ
+Profit margin: 35
+Suplier: OptClinic
+Bulstat: 555
+Phone: 0886626226
+Location: Sofia
+Profit margin: 22

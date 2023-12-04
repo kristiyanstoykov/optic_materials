@@ -1,0 +1,55 @@
+Total Orders: 2
+ID: 0
+Number of materials: 5
+Optic material: Glasses
+Type: Plastic
+Width: 4.54
+Diopter: 3.25
+Price: 25.36
+Optic material: Glasses
+Type: Metal
+Width: 5.12
+Diopter: 3.75
+Price: 78.98
+Optic material: Glasses
+Type: Metal
+Width: 5.12
+Diopter: 3.75
+Price: 78.98
+Optic material: Glasses
+Type: Metal
+Width: 5.12
+Diopter: 3.75
+Price: 78.98
+Optic material: Glasses
+Type: Plastic
+Width: 4.54
+Diopter: 3.25
+Price: 25.36
+Suplier: OptClinic
+Bulstat: 555
+Phone: 0886626226
+Location: Sofia
+Profit margin: 22
+ID: -858993460
+Number of materials: 3
+Optic material: Night
+Type: Glass
+Width: 1.25
+Diopter: 9.85
+Price: 236.56
+Optic material: Night
+Type: Glass
+Width: 1.25
+Diopter: 9.85
+Price: 236.56
+Optic material: Night
+Type: Glass
+Width: 1.25
+Diopter: 9.85
+Price: 236.56
+Suplier: GTS
+Bulstat: 123
+Phone: 0884955590
+Location: PZ
+Profit margin: 35

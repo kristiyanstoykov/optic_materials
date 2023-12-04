@@ -1,0 +1,84 @@
+[
+    {
+        "id": 0,
+        "materials": [
+            {
+                "diopter": 3.25,
+                "name": "Glasses",
+                "price": 25.36,
+                "type": "Plastic",
+                "width": 4.54
+            },
+            {
+                "diopter": 3.75,
+                "name": "Glasses",
+                "price": 78.98,
+                "type": "Metal",
+                "width": 5.12
+            },
+            {
+                "diopter": 3.75,
+                "name": "Glasses",
+                "price": 78.98,
+                "type": "Metal",
+                "width": 5.12
+            },
+            {
+                "diopter": 3.75,
+                "name": "Glasses",
+                "price": 78.98,
+                "type": "Metal",
+                "width": 5.12
+            },
+            {
+                "diopter": 3.25,
+                "name": "Glasses",
+                "price": 25.36,
+                "type": "Plastic",
+                "width": 4.54
+            }
+        ],
+        "numberOfMaterials": 5,
+        "supplier": {
+            "bulstat": "555",
+            "location": "Sofia",
+            "name": "OptClinic",
+            "phone": "0886626226",
+            "profit_margin": 22.0
+        }
+    },
+    {
+        "id": -858993460,
+        "materials": [
+            {
+                "diopter": 9.85,
+                "name": "Night",
+                "price": 236.56,
+                "type": "Glass",
+                "width": 1.25
+            },
+            {
+                "diopter": 9.85,
+                "name": "Night",
+                "price": 236.56,
+                "type": "Glass",
+                "width": 1.25
+            },
+            {
+                "diopter": 9.85,
+                "name": "Night",
+                "price": 236.56,
+                "type": "Glass",
+                "width": 1.25
+            }
+        ],
+        "numberOfMaterials": 3,
+        "supplier": {
+            "bulstat": "123",
+            "location": "PZ",
+            "name": "GTS",
+            "phone": "0884955590",
+            "profit_margin": 35.0
+        }
+    }
+]

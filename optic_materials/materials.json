@@ -1,0 +1,30 @@
+[
+    {
+        "diopter": 3.25,
+        "name": "Glasses",
+        "price": 25.36,
+        "type": "Plastic",
+        "width": 4.54
+    },
+    {
+        "diopter": 3.25,
+        "name": "Glasses",
+        "price": 52.36,
+        "type": "Glass",
+        "width": 6.21
+    },
+    {
+        "diopter": 3.75,
+        "name": "Glasses",
+        "price": 78.98,
+        "type": "Metal",
+        "width": 5.12
+    },
+    {
+        "diopter": 9.85,
+        "name": "Night",
+        "price": 236.56,
+        "type": "Glass",
+        "width": 1.25
+    }
+]
