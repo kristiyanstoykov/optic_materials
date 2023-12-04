@@ -15,10 +15,13 @@ private:
 
 public:
     // Constructor
-    Orders() = default;
+    Orders();
 
     void addOrder(const Order& order);
     vector<Order> getOrders();
+    void addMaterialToLastOrder(const Optic_Material& material);
+    void addSupplierToLastOrder(const Supplier& supplier);
+    void addMaterialToLastOrder(int id);
 
     ostream& print(ostream& output) const override;
     istream& input(istream& input) override;

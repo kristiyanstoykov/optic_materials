@@ -1,5 +1,8 @@
 #include "orders.h"
 
+Orders::Orders() {
+    this->orders.push_back(Order());
+}
 
 // Method to add an order
 void Orders::addOrder(const Order& order) {
@@ -9,6 +12,34 @@ void Orders::addOrder(const Order& order) {
 // Method to get all orders
 vector<Order> Orders::getOrders() {
     return this->orders;
+}
+
+
+void Orders::addMaterialToLastOrder(int id) {
+    if (!this->orders.empty()) {
+        this->orders.back().setId(id);
+    }
+    else {
+        cerr << "There are no orders to add a material to.\n";
+    }
+}
+
+void Orders::addMaterialToLastOrder(const Optic_Material& material) {
+    if (!this->orders.empty()) {
+        this->orders.back().addMaterial(material);
+    }
+    else {
+        cerr << "There are no orders to add a material to.\n";
+    }
+}
+
+void Orders::addSupplierToLastOrder(const Supplier& supplier) {
+    if (!this->orders.empty()) {
+        this->orders.back().addSupplier(supplier);
+    }
+    else {
+        cerr << "There are no orders to add a suppler to.\n";
+    }
 }
 
 ostream& Orders::print(ostream& output) const {
