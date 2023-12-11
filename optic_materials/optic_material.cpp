@@ -86,7 +86,6 @@ void Optic_Material::setPrice(double price)
     this->price = price;
 }
 
-
 ostream& Optic_Material::print(ostream& output) const
 {
     output << "Optic material: " << this->name << endl;
