@@ -9,6 +9,7 @@
 using namespace std;
 
 void load_orders(Orders &orders) {
+    cout << "-------- Start reading orders from TXT -----------\n";
     ifstream in("orders.txt");
     if (!in) {
         cout << "File could not be opened!\n";
@@ -18,9 +19,12 @@ void load_orders(Orders &orders) {
 
     in >> orders;
     in.close();
+    cout << "-------- Successfully read orders to TXT -----------\n";
 }
 
 void load_orders_json(Orders& orders) {
+    cout << "-------- Start reading orders from JSON -----------\n";
+
     ifstream in("orders.json");
     if (!in) {
         cout << "File could not be opened!\n";
@@ -32,10 +36,12 @@ void load_orders_json(Orders& orders) {
     in.close();
 
     orders.from_json(j);
+    cout << "-------- Successfully read orders from JSON -----------\n";
 
 }
 
 void save_orders(Orders orders) {
+    cout << "-------- Started saving orders to TXT -----------\n";
     ofstream out("orders.txt");
     if (!out) {
         cout << "File could not be opened or created!\n";
@@ -44,9 +50,12 @@ void save_orders(Orders orders) {
 
     out << orders;
     out.close();
+    cout << "-------- Successfully saved orders to TXT -----------\n";
 }
 
 void save_orders_json(Orders orders) {
+    cout << "-------- Started saving orders to JSON -----------\n";
+
     ofstream out("orders.json");
     if (!out) {
         cout << "File could not be opened or created!\n";
@@ -57,9 +66,12 @@ void save_orders_json(Orders orders) {
     orders.to_json(j);
     out << j.dump(4);
     out.close();
+    cout << "-------- Successfully saved orders to JSON -----------\n";
 }
 
 void load_suppliers(Suppliers& suppliers) {
+    cout << "-------- Started reading suppliers from TXT -----------\n";
+
     ifstream in("suppliers.txt");
     if (!in) {
         cout << "File could not be opened!\n";
@@ -69,9 +81,12 @@ void load_suppliers(Suppliers& suppliers) {
 
     in >> suppliers;
     in.close();
+    cout << "-------- Successfully read suppliers from TXT -----------\n";
 }
 
 void load_suppliers_json(Suppliers& suppliers) {
+    cout << "-------- Started reading suppliers from JSON -----------\n";
+
     ifstream in("suppliers.json");
     if (!in) {
         cout << "File could not be opened!\n";
@@ -83,10 +98,13 @@ void load_suppliers_json(Suppliers& suppliers) {
     in.close();
 
     suppliers.from_json(j);
+    cout << "-------- Successfully read suppliers from JSON -----------\n";
 
 }
 
 void save_suppliers(Suppliers suppliers) {
+    cout << "-------- Started saving suppliers to TXT -----------\n";
+
     ofstream out("suppliers.txt");
     if (!out) {
         cout << "File could not be opened or created!\n";
@@ -95,9 +113,12 @@ void save_suppliers(Suppliers suppliers) {
 
     out << suppliers;
     out.close();
+    cout << "-------- Successfully saved suppiers to TXT -----------\n";
 }
 
 void save_suppliers_json(Suppliers suppliers) {
+    cout << "-------- Started saving suppliers to JSON -----------\n";
+
     ofstream out("suppliers.json");
     if (!out) {
         cout << "File could not be opened or created!\n";
@@ -108,9 +129,11 @@ void save_suppliers_json(Suppliers suppliers) {
     suppliers.to_json(j);
     out << j.dump(4);
     out.close();
+    cout << "-------- Successfully saved suppliers to JSON -----------\n";
 }
 
 void load_materials(Optic_Materials& materials) {
+    cout << "-------- Started reading materials from TXT -----------\n";
     ifstream in("materials.txt");
     if (!in) {
         cout << "File could not be opened!\n";
@@ -120,10 +143,11 @@ void load_materials(Optic_Materials& materials) {
 
     in >> materials;
     in.close();
+    cout << "-------- Successfully read materials from TXT -----------\n";
 }
 
 void load_materials_json(Optic_Materials& materials) {
-    cout << "Start read to JSON file -----------\n";
+    cout << "-------- Started reading materials from JSON -----------\n";
     ifstream in("materials.json");
     if (!in) {
         cout << "File could not be opened!\n";
@@ -135,10 +159,11 @@ void load_materials_json(Optic_Materials& materials) {
     in.close();
 
     materials.from_json(j);
-
+    cout << "-------- Successfully read materials from JSON -----------\n";
 }
 
 void save_materials(Optic_Materials materials) {
+    cout << "-------- Started saving materials to TXT -----------\n";
     ofstream out("materials.txt");
     if (!out) {
         cout << "File could not be opened or created!\n";
@@ -147,9 +172,11 @@ void save_materials(Optic_Materials materials) {
 
     out << materials;
     out.close();
+    cout << "-------- Successfully read materials to TXT -----------\n";
 }
 
 void save_materials_json(Optic_Materials materials) {
+    cout << "-------- Started saving materials to JSON -----------\n";
     ofstream out("materials.json");
     if (!out) {
         cout << "File could not be opened or created!\n";
@@ -160,6 +187,7 @@ void save_materials_json(Optic_Materials materials) {
     materials.to_json(j);
     out << j.dump(4);
     out.close();
+    cout << "-------- Successfully saved materials to JSON -----------\n";
 }
 
 Supplier enter_supplier() {
@@ -302,23 +330,24 @@ void display_menu(Orders &orders, Suppliers& suppliers, Optic_Materials& materia
     cout << "5. View orders\n";
     cout << "6. View suppliers\n";
     cout << "7. View optic materials\n";
-    cout << "8. Save orders, suppliers and materials to file\n";
+    cout << "8. Print orders total\n";
+    cout << "9. Save orders, suppliers and materials to file\n";
     cout << "0. Exit\n";
 
     int choice;
     cout << "Enter your choice: ";
     cin >> choice;
 
+    cout << endl;
+
     switch (choice)
     {
     case 1:
-        // TODO Load orders, suppliers and materials from file
+        // Load orders, suppliers and materials from file
         //load_orders(orders);
         load_orders_json(orders);
-        load_suppliers(suppliers);
-        //load_orders_json(suppliers);
-        load_materials(materials);
-        //load_orders_json(materials);
+        load_suppliers_json(suppliers);
+        load_materials_json(materials);
         break;
     case 2:
         enter_order(orders, materials, suppliers);
@@ -334,17 +363,29 @@ void display_menu(Orders &orders, Suppliers& suppliers, Optic_Materials& materia
         break;
     case 5:
         // View orders ( to screen )
+        cout << "------Start print Orders--------\n";
         cout << orders;
-        break;
+        cout << "------End print Orders--------\n";
+            break;
     case 6:
         // View suppliers ( to screen )
+        cout << "------Start print Suppliers--------\n";
         cout << suppliers;
+        cout << "------End print Suppliers--------\n";
         break;
     case 7:
         // View optic materials ( to screen )
+        cout << "------Start print Materials--------\n";
         cout << materials;
+        cout << "------End print Materials--------\n";
         break;
     case 8:
+        // View all orders totals ( to screen )
+        cout << "------Start print Orders totals--------\n";
+        orders.printOrderTotal();
+        cout << "------End print Orders totals--------\n";
+        break;
+    case 9:
         // Save orders, suppliers and materials to file
         save_orders(orders);
         save_orders_json(orders);
@@ -361,6 +402,8 @@ void display_menu(Orders &orders, Suppliers& suppliers, Optic_Materials& materia
     default:
         break;
     }
+
+    cout << endl;
 
     display_menu(orders, suppliers, materials);
 
