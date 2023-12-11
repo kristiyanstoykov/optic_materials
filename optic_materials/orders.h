@@ -21,7 +21,8 @@ public:
     vector<Order> getOrders();
     void addMaterialToLastOrder(const Optic_Material& material);
     void addSupplierToLastOrder(const Supplier& supplier);
-    void addMaterialToLastOrder(int id);
+    void addIdToLastOrder(int id);
+    void printOrderTotal();
 
     ostream& print(ostream& output) const override;
     istream& input(istream& input) override;

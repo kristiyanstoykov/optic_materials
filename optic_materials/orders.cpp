@@ -14,8 +14,7 @@ vector<Order> Orders::getOrders() {
     return this->orders;
 }
 
-
-void Orders::addMaterialToLastOrder(int id) {
+void Orders::addIdToLastOrder(int id) {
     if (!this->orders.empty()) {
         this->orders.back().setId(id);
     }
@@ -39,6 +38,13 @@ void Orders::addSupplierToLastOrder(const Supplier& supplier) {
     }
     else {
         cerr << "There are no orders to add a suppler to.\n";
+    }
+}
+
+void Orders::printOrderTotal()
+{
+    for(auto& order : this->orders) {
+        cout << "Order " << order.getId() << ": " << order.getTotalRaw() << " +" << " supplier profit: " << order.getSupplier().getProfitMargin() << "% => " << order.getTotal() << "BGN\n";
     }
 }
 
