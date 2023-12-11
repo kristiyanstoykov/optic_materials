@@ -42,6 +42,17 @@ void Order::addSupplier(const Supplier& supplier) {
     this->supplier = supplier;
 }
 
+double Order::getTotalRaw()
+{
+    double total = 0;
+
+    for (auto& material : this->materials) {
+        total += material.getPrice();
+    }
+
+    return total;
+}
+
 double Order::getTotal() {
     double total = 0;
 
@@ -49,7 +60,7 @@ double Order::getTotal() {
         total += material.getPrice();
     }
 
-    total *= 100 / this->supplier.getProfitMargin();
+    total *= (1 + this->supplier.getProfitMargin() / 100);
 
     return total;
 }

@@ -22,6 +22,7 @@ public:
     void addMaterial(const Optic_Material& material);
     void addSupplier(const Supplier& supplier);
     Supplier getSupplier();
+    double getTotalRaw();
     double getTotal();
 
     ostream& print(ostream& output) const override;
