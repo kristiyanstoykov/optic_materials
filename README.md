@@ -12,6 +12,8 @@ Made with:
 
 1. [Installation](#installation)
 2. [Usage](#usage)
+3. [UML diagram](#uml-diagram)
+4. [Features](#features)
    - [Base (base.h)](#base-baseh)
      - [Functions](#functions)
    - [Optic_Material (optic_material.h)](#optic_material-optic_materialh)
@@ -41,7 +43,7 @@ Made with:
      - [Constructors](#constructors-6)
      - [Overrides from Base](#overrides-from-base-6)
    - [Main (main.cpp)](#main-maincpp)
-3. [Contact](#contact)
+5. [Contact](#contact)
 
 ## Installation
 
@@ -60,6 +62,10 @@ git clone https://github.com/kristiyanstoykov/optic_materials.git
 ```
 
 <p align="right">(<a href="#optic-materials">back to top</a>)</p>
+
+## UML diagram
+![UML diagram](/uml/uml.jpg)
+
 
 ## Features
 
