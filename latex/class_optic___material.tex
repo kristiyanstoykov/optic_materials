@@ -1,0 +1,315 @@
+\doxysection{Optic\+\_\+\+Material Class Reference}
+\hypertarget{class_optic___material}{}\label{class_optic___material}\index{Optic\_Material@{Optic\_Material}}
+
+
+Class representing an optical material.  
+
+
+
+
+{\ttfamily \#include $<$optic\+\_\+material.\+h$>$}
+
+Inheritance diagram for Optic\+\_\+\+Material\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_optic___material}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_optic___material_ad2765c9aec87f4d8378ff51056cfda6f}\label{class_optic___material_ad2765c9aec87f4d8378ff51056cfda6f} 
+{\bfseries Optic\+\_\+\+Material} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_optic___material}{Optic\+\_\+\+Material}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_optic___material_a1887f2b157295828ff67b5bc59f4d4a3}{Optic\+\_\+\+Material}} (string type, double width, double diopter, string name, double price)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_optic___material}{Optic\+\_\+\+Material} with parameters. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_optic___material_a1c2b05d9c5212bdc2f9d36281a912633}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Gets the type of the optical material. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_optic___material_a57a46bc57b3590895e275dba817134d2}{set\+Type}} (string type)
+\begin{DoxyCompactList}\small\item\em Sets the type of the optical material. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_optic___material_a4270312c704fbb5424efb1b17993cc45}{get\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Gets the width of the optical material. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_optic___material_af178e241792066434ab058787782aa81}{set\+Width}} (double width)
+\begin{DoxyCompactList}\small\item\em Sets the width of the optical material. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_optic___material_aa0e11793faa4cca1c0e783084c679cfa}{get\+Diopter}} () const
+\begin{DoxyCompactList}\small\item\em Gets the diopter value of the optical material. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_optic___material_a1fdce7c67aaedbab53b6d57b5decdd3a}{set\+Diopter}} (double diopter)
+\begin{DoxyCompactList}\small\item\em Sets the diopter value of the optical material. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_optic___material_a3c89af394b82d4ed4bd606b59dc0ca2d}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the optical material. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_optic___material_a543a5ac02d1b5cc1d84b41bca2f35650}{set\+Name}} (string name)
+\begin{DoxyCompactList}\small\item\em Sets the name of the optical material. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_optic___material_a0d2641aa613e96d7faa7e245ecaa74df}{get\+Price}} () const
+\begin{DoxyCompactList}\small\item\em Gets the price of the optical material. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_optic___material_aa10a6226047fe4d9ba186ba1520c72fd}{set\+Price}} (double price)
+\begin{DoxyCompactList}\small\item\em Sets the price of the optical material. \end{DoxyCompactList}\item 
+ostream \& \mbox{\hyperlink{class_optic___material_ab1b82b0b79244d30846538b3c856620e}{print}} (ostream \&output) const override
+\begin{DoxyCompactList}\small\item\em Overridden method for printing the optical material\textquotesingle{}s details to an output stream. \end{DoxyCompactList}\item 
+istream \& \mbox{\hyperlink{class_optic___material_a8a6618f5f055731a3b26406724abb2f8}{input}} (istream \&input) override
+\begin{DoxyCompactList}\small\item\em Overridden method for reading data into the optical material from an input stream. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_optic___material_a1ee9dbecb23609a8be27963a6a9dcf66}{to\+\_\+json}} (json \&j) const override
+\begin{DoxyCompactList}\small\item\em Overridden method for converting the optical material\textquotesingle{}s state to JSON format. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_optic___material_a6ff0fb3abc61a71f75aca59c78faf71d}{from\+\_\+json}} (json \&j) override
+\begin{DoxyCompactList}\small\item\em Overridden method for setting the optical material\textquotesingle{}s state from JSON format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing an optical material. 
+
+This class stores details of an optical material and provides methods for setting and getting its properties. It extends the \doxylink{class_base}{Base} class, providing implementations for serialization and deserialization to/from streams and JSON. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_optic___material_a1887f2b157295828ff67b5bc59f4d4a3}\label{class_optic___material_a1887f2b157295828ff67b5bc59f4d4a3} 
+\index{Optic\_Material@{Optic\_Material}!Optic\_Material@{Optic\_Material}}
+\index{Optic\_Material@{Optic\_Material}!Optic\_Material@{Optic\_Material}}
+\doxysubsubsection{\texorpdfstring{Optic\_Material()}{Optic\_Material()}}
+{\footnotesize\ttfamily Optic\+\_\+\+Material\+::\+Optic\+\_\+\+Material (\begin{DoxyParamCaption}\item[{string}]{type,  }\item[{double}]{width,  }\item[{double}]{diopter,  }\item[{string}]{name,  }\item[{double}]{price }\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{class_optic___material}{Optic\+\_\+\+Material} with parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of the optical material. \\
+\hline
+{\em width} & The width of the optical material. \\
+\hline
+{\em diopter} & The diopter value of the optical material. \\
+\hline
+{\em name} & The name of the optical material. \\
+\hline
+{\em price} & The price of the optical material. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_optic___material_a6ff0fb3abc61a71f75aca59c78faf71d}\label{class_optic___material_a6ff0fb3abc61a71f75aca59c78faf71d} 
+\index{Optic\_Material@{Optic\_Material}!from\_json@{from\_json}}
+\index{from\_json@{from\_json}!Optic\_Material@{Optic\_Material}}
+\doxysubsubsection{\texorpdfstring{from\_json()}{from\_json()}}
+{\footnotesize\ttfamily void Optic\+\_\+\+Material\+::from\+\_\+json (\begin{DoxyParamCaption}\item[{json \&}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overridden method for setting the optical material\textquotesingle{}s state from JSON format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & JSON object from which the object\textquotesingle{}s state is to be read. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_base}{Base}}.
+
+\Hypertarget{class_optic___material_aa0e11793faa4cca1c0e783084c679cfa}\label{class_optic___material_aa0e11793faa4cca1c0e783084c679cfa} 
+\index{Optic\_Material@{Optic\_Material}!getDiopter@{getDiopter}}
+\index{getDiopter@{getDiopter}!Optic\_Material@{Optic\_Material}}
+\doxysubsubsection{\texorpdfstring{getDiopter()}{getDiopter()}}
+{\footnotesize\ttfamily double Optic\+\_\+\+Material\+::get\+Diopter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the diopter value of the optical material. 
+
+\begin{DoxyReturn}{Returns}
+The diopter value of the optical material. 
+\end{DoxyReturn}
+\Hypertarget{class_optic___material_a3c89af394b82d4ed4bd606b59dc0ca2d}\label{class_optic___material_a3c89af394b82d4ed4bd606b59dc0ca2d} 
+\index{Optic\_Material@{Optic\_Material}!getName@{getName}}
+\index{getName@{getName}!Optic\_Material@{Optic\_Material}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Optic\+\_\+\+Material\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the name of the optical material. 
+
+\begin{DoxyReturn}{Returns}
+The name of the optical material. 
+\end{DoxyReturn}
+\Hypertarget{class_optic___material_a0d2641aa613e96d7faa7e245ecaa74df}\label{class_optic___material_a0d2641aa613e96d7faa7e245ecaa74df} 
+\index{Optic\_Material@{Optic\_Material}!getPrice@{getPrice}}
+\index{getPrice@{getPrice}!Optic\_Material@{Optic\_Material}}
+\doxysubsubsection{\texorpdfstring{getPrice()}{getPrice()}}
+{\footnotesize\ttfamily double Optic\+\_\+\+Material\+::get\+Price (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the price of the optical material. 
+
+\begin{DoxyReturn}{Returns}
+The price of the optical material. 
+\end{DoxyReturn}
+\Hypertarget{class_optic___material_a1c2b05d9c5212bdc2f9d36281a912633}\label{class_optic___material_a1c2b05d9c5212bdc2f9d36281a912633} 
+\index{Optic\_Material@{Optic\_Material}!getType@{getType}}
+\index{getType@{getType}!Optic\_Material@{Optic\_Material}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily std\+::string Optic\+\_\+\+Material\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the type of the optical material. 
+
+\begin{DoxyReturn}{Returns}
+The type of the optical material. 
+\end{DoxyReturn}
+\Hypertarget{class_optic___material_a4270312c704fbb5424efb1b17993cc45}\label{class_optic___material_a4270312c704fbb5424efb1b17993cc45} 
+\index{Optic\_Material@{Optic\_Material}!getWidth@{getWidth}}
+\index{getWidth@{getWidth}!Optic\_Material@{Optic\_Material}}
+\doxysubsubsection{\texorpdfstring{getWidth()}{getWidth()}}
+{\footnotesize\ttfamily double Optic\+\_\+\+Material\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the width of the optical material. 
+
+\begin{DoxyReturn}{Returns}
+The width of the optical material. 
+\end{DoxyReturn}
+\Hypertarget{class_optic___material_a8a6618f5f055731a3b26406724abb2f8}\label{class_optic___material_a8a6618f5f055731a3b26406724abb2f8} 
+\index{Optic\_Material@{Optic\_Material}!input@{input}}
+\index{input@{input}!Optic\_Material@{Optic\_Material}}
+\doxysubsubsection{\texorpdfstring{input()}{input()}}
+{\footnotesize\ttfamily istream \& Optic\+\_\+\+Material\+::input (\begin{DoxyParamCaption}\item[{istream \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overridden method for reading data into the optical material from an input stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The input stream from which the data is to be read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the modified input stream. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_base}{Base}}.
+
+\Hypertarget{class_optic___material_ab1b82b0b79244d30846538b3c856620e}\label{class_optic___material_ab1b82b0b79244d30846538b3c856620e} 
+\index{Optic\_Material@{Optic\_Material}!print@{print}}
+\index{print@{print}!Optic\_Material@{Optic\_Material}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily ostream \& Optic\+\_\+\+Material\+::print (\begin{DoxyParamCaption}\item[{ostream \&}]{output }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overridden method for printing the optical material\textquotesingle{}s details to an output stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em output} & The output stream to which the data is to be written. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the modified output stream. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_base}{Base}}.
+
+\Hypertarget{class_optic___material_a1fdce7c67aaedbab53b6d57b5decdd3a}\label{class_optic___material_a1fdce7c67aaedbab53b6d57b5decdd3a} 
+\index{Optic\_Material@{Optic\_Material}!setDiopter@{setDiopter}}
+\index{setDiopter@{setDiopter}!Optic\_Material@{Optic\_Material}}
+\doxysubsubsection{\texorpdfstring{setDiopter()}{setDiopter()}}
+{\footnotesize\ttfamily void Optic\+\_\+\+Material\+::set\+Diopter (\begin{DoxyParamCaption}\item[{double}]{diopter }\end{DoxyParamCaption})}
+
+
+
+Sets the diopter value of the optical material. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em diopter} & The diopter value of the optical material. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_optic___material_a543a5ac02d1b5cc1d84b41bca2f35650}\label{class_optic___material_a543a5ac02d1b5cc1d84b41bca2f35650} 
+\index{Optic\_Material@{Optic\_Material}!setName@{setName}}
+\index{setName@{setName}!Optic\_Material@{Optic\_Material}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void Optic\+\_\+\+Material\+::set\+Name (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+Sets the name of the optical material. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the optical material. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_optic___material_aa10a6226047fe4d9ba186ba1520c72fd}\label{class_optic___material_aa10a6226047fe4d9ba186ba1520c72fd} 
+\index{Optic\_Material@{Optic\_Material}!setPrice@{setPrice}}
+\index{setPrice@{setPrice}!Optic\_Material@{Optic\_Material}}
+\doxysubsubsection{\texorpdfstring{setPrice()}{setPrice()}}
+{\footnotesize\ttfamily void Optic\+\_\+\+Material\+::set\+Price (\begin{DoxyParamCaption}\item[{double}]{price }\end{DoxyParamCaption})}
+
+
+
+Sets the price of the optical material. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em price} & The price of the optical material. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_optic___material_a57a46bc57b3590895e275dba817134d2}\label{class_optic___material_a57a46bc57b3590895e275dba817134d2} 
+\index{Optic\_Material@{Optic\_Material}!setType@{setType}}
+\index{setType@{setType}!Optic\_Material@{Optic\_Material}}
+\doxysubsubsection{\texorpdfstring{setType()}{setType()}}
+{\footnotesize\ttfamily void Optic\+\_\+\+Material\+::set\+Type (\begin{DoxyParamCaption}\item[{string}]{type }\end{DoxyParamCaption})}
+
+
+
+Sets the type of the optical material. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of the optical material. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_optic___material_af178e241792066434ab058787782aa81}\label{class_optic___material_af178e241792066434ab058787782aa81} 
+\index{Optic\_Material@{Optic\_Material}!setWidth@{setWidth}}
+\index{setWidth@{setWidth}!Optic\_Material@{Optic\_Material}}
+\doxysubsubsection{\texorpdfstring{setWidth()}{setWidth()}}
+{\footnotesize\ttfamily void Optic\+\_\+\+Material\+::set\+Width (\begin{DoxyParamCaption}\item[{double}]{width }\end{DoxyParamCaption})}
+
+
+
+Sets the width of the optical material. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The width of the optical material. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_optic___material_a1ee9dbecb23609a8be27963a6a9dcf66}\label{class_optic___material_a1ee9dbecb23609a8be27963a6a9dcf66} 
+\index{Optic\_Material@{Optic\_Material}!to\_json@{to\_json}}
+\index{to\_json@{to\_json}!Optic\_Material@{Optic\_Material}}
+\doxysubsubsection{\texorpdfstring{to\_json()}{to\_json()}}
+{\footnotesize\ttfamily void Optic\+\_\+\+Material\+::to\+\_\+json (\begin{DoxyParamCaption}\item[{json \&}]{j }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overridden method for converting the optical material\textquotesingle{}s state to JSON format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & JSON object to which the object\textquotesingle{}s state is to be written. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_base}{Base}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+optic\+\_\+material.\+h\item 
+optic\+\_\+material.\+cpp\end{DoxyCompactItemize}

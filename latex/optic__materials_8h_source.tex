@@ -1,0 +1,46 @@
+\doxysection{optic\+\_\+materials.\+h}
+\hypertarget{optic__materials_8h_source}{}\label{optic__materials_8h_source}\index{optic\_materials.h@{optic\_materials.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ OPTIC\_MATERIALS\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ OPTIC\_MATERIALS\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}optic\_material.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}base.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <nlohmann/json.hpp>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{using\ }json\ =\ nlohmann::json;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_optic___materials}{Optic\_Materials}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_base}{Base}}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00023\ \ \ \ \ vector<Optic\_Material>\ optic\_materials;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_optic___materials_a11465803817bd8798f2d95fb285200d5}{Optic\_Materials}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_optic___materials_a193c8c0add2f6904c20cd8165758cc89}{getSize}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_optic___materials_aff8a239d4154eb110aa3b656a5e3cb44}{addOpticMaterial}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_optic___material}{Optic\_Material}}\&\ optic\_material);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ vector<Optic\_Material>\ \mbox{\hyperlink{class_optic___materials_a174d382824f49989fef82810ba9107ab}{getOpticMaterials}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_optic___material}{Optic\_Material}}\ \mbox{\hyperlink{class_optic___materials_a593e1b75366e1bac1e823a3c46a8006e}{getOpticMaterialByIndex}}(\textcolor{keywordtype}{int}\ index)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00061\ \ \ \ \ ostream\&\ \mbox{\hyperlink{class_optic___materials_a0dfc05f98314c88d6b497c2bd0e5a7db}{print}}(ostream\&\ output)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_optic___materials_ab690957f02283b4502b0d242778dc5d6}{print\_on\_one\_line}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00073\ \ \ \ \ istream\&\ \mbox{\hyperlink{class_optic___materials_aada3ef1036b5da309390bcee262bcdfa}{input}}(istream\&\ \mbox{\hyperlink{class_optic___materials_aada3ef1036b5da309390bcee262bcdfa}{input}})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_optic___materials_a1e962fbf610006489e54d0aaa38f9f67}{to\_json}}(json\&\ j)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_optic___materials_a280bc3de96a3da2ff9294c9f9a61b3c8}{from\_json}}(json\&\ j)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00086\ \};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

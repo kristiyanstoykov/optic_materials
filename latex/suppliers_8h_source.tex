@@ -1,0 +1,46 @@
+\doxysection{suppliers.\+h}
+\hypertarget{suppliers_8h_source}{}\label{suppliers_8h_source}\index{suppliers.h@{suppliers.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ SUPPLIERS\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ SUPPLIERS\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}supplier.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}base.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <nlohmann/json.hpp>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{using\ }json\ =\ nlohmann::json;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_suppliers}{Suppliers}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_base}{Base}}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00023\ \ \ \ \ vector<Supplier>\ suppliers;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_suppliers_a8dd938d5803072f9b9f867ac2604eb5e}{Suppliers}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suppliers_aaf2c7b0afb5a018e2358c3707001883c}{addSupplier}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_supplier}{Supplier}}\&\ supplier);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ \ \ vector<Supplier>\ \mbox{\hyperlink{class_suppliers_a311e0f12db7b86ea25c49ce83fb9d83c}{getSuppliers}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{class_supplier}{Supplier}}\ \mbox{\hyperlink{class_suppliers_a754a6c6693143f8b297871cad503f690}{getSupplierByIndex}}(\textcolor{keywordtype}{int}\ index)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_suppliers_ababe40801a08c7f0ba088d1517f658c6}{getSize}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suppliers_a225fb2c41a3f6e76e51bb0af77fabb5d}{print\_on\_one\_line}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00066\ \ \ \ \ ostream\&\ \mbox{\hyperlink{class_suppliers_ad40aad0713753f04c867483f2f2562e1}{print}}(ostream\&\ output)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00073\ \ \ \ \ istream\&\ \mbox{\hyperlink{class_suppliers_ac6a19188cf1414da64adf064f3e20470}{input}}(istream\&\ \mbox{\hyperlink{class_suppliers_ac6a19188cf1414da64adf064f3e20470}{input}})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suppliers_a92ee527d234aba172e72b234334dc1d0}{to\_json}}(json\&\ j)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suppliers_afa72b0b11030a84540a9d9582dbb0db5}{from\_json}}(json\&\ j)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00086\ \};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

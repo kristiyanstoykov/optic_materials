@@ -1,0 +1,277 @@
+\doxysection{Order Class Reference}
+\hypertarget{class_order}{}\label{class_order}\index{Order@{Order}}
+
+
+Class representing an order which includes optic materials and a supplier.  
+
+
+
+
+{\ttfamily \#include $<$order.\+h$>$}
+
+Inheritance diagram for Order\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_order}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_order_a7b6a660b03708ed5b4e1c4a6dc2a664a}\label{class_order_a7b6a660b03708ed5b4e1c4a6dc2a664a} 
+{\bfseries Order} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_order}{Order}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_order_a1c97f47c65c683ace0c12d039fa39ad6}{Order}} (int id, vector$<$ \mbox{\hyperlink{class_optic___material}{Optic\+\_\+\+Material}} $>$ materials, \mbox{\hyperlink{class_supplier}{Supplier}} supplier)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_order}{Order} with parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_ac2e6861304117b7f0170af983ec4ad14}{set\+Id}} (int id)
+\begin{DoxyCompactList}\small\item\em Sets the unique identifier of the order. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_order_a789df41dc9e5c611cd16d930bba49b8d}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Gets the unique identifier of the order. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_optic___material}{Optic\+\_\+\+Material}} $>$ \mbox{\hyperlink{class_order_a1cced690627eef6886f075468bad1354}{get\+Materials}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves all optic materials included in the order. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_af8bb95f3d13fae2da0cfe69b7c71cb24}{add\+Material}} (const \mbox{\hyperlink{class_optic___material}{Optic\+\_\+\+Material}} \&material)
+\begin{DoxyCompactList}\small\item\em Adds an optic material to the order. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_a48a8438a2ae5c5beff8fabe5669da56c}{add\+Supplier}} (const \mbox{\hyperlink{class_supplier}{Supplier}} \&supplier)
+\begin{DoxyCompactList}\small\item\em Sets the supplier for the order. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_supplier}{Supplier}} \mbox{\hyperlink{class_order_a05043ed7e4d48af9199e08ddb743db04}{get\+Supplier}} ()
+\begin{DoxyCompactList}\small\item\em Gets the supplier associated with the order. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_order_a5018d1f9dc1372063ca59c0a67fcc258}{get\+Total\+Raw}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the total cost of the order without profit margin. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_order_a62ff67f913e6d1e539ce2e3f4e0006ea}{get\+Total}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the total cost of the order including the supplier\textquotesingle{}s profit margin. \end{DoxyCompactList}\item 
+ostream \& \mbox{\hyperlink{class_order_a20e3e4a27cf519bf76b2d10722836528}{print}} (ostream \&output) const override
+\begin{DoxyCompactList}\small\item\em Overridden method for printing the order\textquotesingle{}s details to an output stream. \end{DoxyCompactList}\item 
+istream \& \mbox{\hyperlink{class_order_a4158a25510ec5151779f0f71cb99555c}{input}} (istream \&input) override
+\begin{DoxyCompactList}\small\item\em Overridden method for reading data into the order from an input stream. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_a6ae53dbb8c9f4054931742b9d7389925}{to\+\_\+json}} (json \&j) const override
+\begin{DoxyCompactList}\small\item\em Overridden method for converting the order\textquotesingle{}s state to JSON format. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_ac4131432c0ad6801fa7249089fa38d06}{from\+\_\+json}} (json \&j) override
+\begin{DoxyCompactList}\small\item\em Overridden method for setting the order\textquotesingle{}s state from JSON format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing an order which includes optic materials and a supplier. 
+
+This class encapsulates the details of an order, including a list of optic materials, a supplier, and methods for managing and calculating the total cost of the order. It extends the \doxylink{class_base}{Base} class, providing implementations for serialization and deserialization to/from streams and JSON. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_order_a1c97f47c65c683ace0c12d039fa39ad6}\label{class_order_a1c97f47c65c683ace0c12d039fa39ad6} 
+\index{Order@{Order}!Order@{Order}}
+\index{Order@{Order}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{Order()}{Order()}}
+{\footnotesize\ttfamily Order\+::\+Order (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{vector$<$ \mbox{\hyperlink{class_optic___material}{Optic\+\_\+\+Material}} $>$}]{materials,  }\item[{\mbox{\hyperlink{class_supplier}{Supplier}}}]{supplier }\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{class_order}{Order} with parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The unique identifier for the order. \\
+\hline
+{\em materials} & A vector of \doxylink{class_optic___material}{Optic\+\_\+\+Material} objects included in the order. \\
+\hline
+{\em supplier} & The \doxylink{class_supplier}{Supplier} associated with the order. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_order_af8bb95f3d13fae2da0cfe69b7c71cb24}\label{class_order_af8bb95f3d13fae2da0cfe69b7c71cb24} 
+\index{Order@{Order}!addMaterial@{addMaterial}}
+\index{addMaterial@{addMaterial}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{addMaterial()}{addMaterial()}}
+{\footnotesize\ttfamily void Order\+::add\+Material (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_optic___material}{Optic\+\_\+\+Material}} \&}]{material }\end{DoxyParamCaption})}
+
+
+
+Adds an optic material to the order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material} & The \doxylink{class_optic___material}{Optic\+\_\+\+Material} object to be added to the order. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_order_a48a8438a2ae5c5beff8fabe5669da56c}\label{class_order_a48a8438a2ae5c5beff8fabe5669da56c} 
+\index{Order@{Order}!addSupplier@{addSupplier}}
+\index{addSupplier@{addSupplier}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{addSupplier()}{addSupplier()}}
+{\footnotesize\ttfamily void Order\+::add\+Supplier (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_supplier}{Supplier}} \&}]{supplier }\end{DoxyParamCaption})}
+
+
+
+Sets the supplier for the order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em supplier} & The \doxylink{class_supplier}{Supplier} to be associated with the order. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_order_ac4131432c0ad6801fa7249089fa38d06}\label{class_order_ac4131432c0ad6801fa7249089fa38d06} 
+\index{Order@{Order}!from\_json@{from\_json}}
+\index{from\_json@{from\_json}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{from\_json()}{from\_json()}}
+{\footnotesize\ttfamily void Order\+::from\+\_\+json (\begin{DoxyParamCaption}\item[{json \&}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overridden method for setting the order\textquotesingle{}s state from JSON format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & JSON object from which the order\textquotesingle{}s state is to be read. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_base}{Base}}.
+
+\Hypertarget{class_order_a789df41dc9e5c611cd16d930bba49b8d}\label{class_order_a789df41dc9e5c611cd16d930bba49b8d} 
+\index{Order@{Order}!getId@{getId}}
+\index{getId@{getId}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int Order\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the unique identifier of the order. 
+
+\begin{DoxyReturn}{Returns}
+The unique identifier of the order. 
+\end{DoxyReturn}
+\Hypertarget{class_order_a1cced690627eef6886f075468bad1354}\label{class_order_a1cced690627eef6886f075468bad1354} 
+\index{Order@{Order}!getMaterials@{getMaterials}}
+\index{getMaterials@{getMaterials}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{getMaterials()}{getMaterials()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_optic___material}{Optic\+\_\+\+Material}} $>$ Order\+::get\+Materials (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves all optic materials included in the order. 
+
+\begin{DoxyReturn}{Returns}
+A vector of \doxylink{class_optic___material}{Optic\+\_\+\+Material} objects in the order. 
+\end{DoxyReturn}
+\Hypertarget{class_order_a05043ed7e4d48af9199e08ddb743db04}\label{class_order_a05043ed7e4d48af9199e08ddb743db04} 
+\index{Order@{Order}!getSupplier@{getSupplier}}
+\index{getSupplier@{getSupplier}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{getSupplier()}{getSupplier()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_supplier}{Supplier}} Order\+::get\+Supplier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the supplier associated with the order. 
+
+\begin{DoxyReturn}{Returns}
+The \doxylink{class_supplier}{Supplier} associated with the order. 
+\end{DoxyReturn}
+\Hypertarget{class_order_a62ff67f913e6d1e539ce2e3f4e0006ea}\label{class_order_a62ff67f913e6d1e539ce2e3f4e0006ea} 
+\index{Order@{Order}!getTotal@{getTotal}}
+\index{getTotal@{getTotal}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{getTotal()}{getTotal()}}
+{\footnotesize\ttfamily double Order\+::get\+Total (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculates the total cost of the order including the supplier\textquotesingle{}s profit margin. 
+
+\begin{DoxyReturn}{Returns}
+The total cost of the order. 
+\end{DoxyReturn}
+\Hypertarget{class_order_a5018d1f9dc1372063ca59c0a67fcc258}\label{class_order_a5018d1f9dc1372063ca59c0a67fcc258} 
+\index{Order@{Order}!getTotalRaw@{getTotalRaw}}
+\index{getTotalRaw@{getTotalRaw}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{getTotalRaw()}{getTotalRaw()}}
+{\footnotesize\ttfamily double Order\+::get\+Total\+Raw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculates the total cost of the order without profit margin. 
+
+\begin{DoxyReturn}{Returns}
+The total raw cost of the order. 
+\end{DoxyReturn}
+\Hypertarget{class_order_a4158a25510ec5151779f0f71cb99555c}\label{class_order_a4158a25510ec5151779f0f71cb99555c} 
+\index{Order@{Order}!input@{input}}
+\index{input@{input}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{input()}{input()}}
+{\footnotesize\ttfamily istream \& Order\+::input (\begin{DoxyParamCaption}\item[{istream \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overridden method for reading data into the order from an input stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The input stream from which the order data is to be read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the modified input stream. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_base}{Base}}.
+
+\Hypertarget{class_order_a20e3e4a27cf519bf76b2d10722836528}\label{class_order_a20e3e4a27cf519bf76b2d10722836528} 
+\index{Order@{Order}!print@{print}}
+\index{print@{print}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily ostream \& Order\+::print (\begin{DoxyParamCaption}\item[{ostream \&}]{output }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overridden method for printing the order\textquotesingle{}s details to an output stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em output} & The output stream to which the order\textquotesingle{}s data is to be written. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the modified output stream. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_base}{Base}}.
+
+\Hypertarget{class_order_ac2e6861304117b7f0170af983ec4ad14}\label{class_order_ac2e6861304117b7f0170af983ec4ad14} 
+\index{Order@{Order}!setId@{setId}}
+\index{setId@{setId}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily void Order\+::set\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Sets the unique identifier of the order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The unique identifier for the order. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_order_a6ae53dbb8c9f4054931742b9d7389925}\label{class_order_a6ae53dbb8c9f4054931742b9d7389925} 
+\index{Order@{Order}!to\_json@{to\_json}}
+\index{to\_json@{to\_json}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{to\_json()}{to\_json()}}
+{\footnotesize\ttfamily void Order\+::to\+\_\+json (\begin{DoxyParamCaption}\item[{json \&}]{j }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overridden method for converting the order\textquotesingle{}s state to JSON format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & JSON object to which the order\textquotesingle{}s state is to be written. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_base}{Base}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+order.\+h\item 
+order.\+cpp\end{DoxyCompactItemize}

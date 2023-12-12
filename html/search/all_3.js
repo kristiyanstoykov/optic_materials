@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['getbulstat_0',['getBulstat',['../class_supplier.html#a32770f1f5bc97789c5c0f1e21465ae76',1,'Supplier']]],
+  ['getdiopter_1',['getDiopter',['../class_optic___material.html#aa0e11793faa4cca1c0e783084c679cfa',1,'Optic_Material']]],
+  ['getid_2',['getId',['../class_order.html#a789df41dc9e5c611cd16d930bba49b8d',1,'Order']]],
+  ['getlocation_3',['getLocation',['../class_supplier.html#ab889b6fb1fd64c861f7fac2a54f03606',1,'Supplier']]],
+  ['getmaterials_4',['getMaterials',['../class_order.html#a1cced690627eef6886f075468bad1354',1,'Order']]],
+  ['getname_5',['getname',['../class_optic___material.html#a3c89af394b82d4ed4bd606b59dc0ca2d',1,'Optic_Material::getName()'],['../class_supplier.html#adeece099a480ea8985f998722e724dc7',1,'Supplier::getName()']]],
+  ['getopticmaterialbyindex_6',['getOpticMaterialByIndex',['../class_optic___materials.html#a593e1b75366e1bac1e823a3c46a8006e',1,'Optic_Materials']]],
+  ['getopticmaterials_7',['getOpticMaterials',['../class_optic___materials.html#a174d382824f49989fef82810ba9107ab',1,'Optic_Materials']]],
+  ['getorders_8',['getOrders',['../class_orders.html#ada1a41ff6ed451bef7f69c09de6f3d6e',1,'Orders']]],
+  ['getphone_9',['getPhone',['../class_supplier.html#ae9bd1e10d0c7ad87a27ad38c64fcfd5e',1,'Supplier']]],
+  ['getprice_10',['getPrice',['../class_optic___material.html#a0d2641aa613e96d7faa7e245ecaa74df',1,'Optic_Material']]],
+  ['getprofitmargin_11',['getProfitMargin',['../class_supplier.html#ae768b4b924aadd7270efad3fefd5fa41',1,'Supplier']]],
+  ['getsize_12',['getsize',['../class_optic___materials.html#a193c8c0add2f6904c20cd8165758cc89',1,'Optic_Materials::getSize()'],['../class_suppliers.html#ababe40801a08c7f0ba088d1517f658c6',1,'Suppliers::getSize()']]],
+  ['getsupplier_13',['getSupplier',['../class_order.html#a05043ed7e4d48af9199e08ddb743db04',1,'Order']]],
+  ['getsupplierbyindex_14',['getSupplierByIndex',['../class_suppliers.html#a754a6c6693143f8b297871cad503f690',1,'Suppliers']]],
+  ['getsuppliers_15',['getSuppliers',['../class_suppliers.html#a311e0f12db7b86ea25c49ce83fb9d83c',1,'Suppliers']]],
+  ['gettotal_16',['getTotal',['../class_order.html#a62ff67f913e6d1e539ce2e3f4e0006ea',1,'Order']]],
+  ['gettotalraw_17',['getTotalRaw',['../class_order.html#a5018d1f9dc1372063ca59c0a67fcc258',1,'Order']]],
+  ['gettype_18',['getType',['../class_optic___material.html#a1c2b05d9c5212bdc2f9d36281a912633',1,'Optic_Material']]],
+  ['getwidth_19',['getWidth',['../class_optic___material.html#a4270312c704fbb5424efb1b17993cc45',1,'Optic_Material']]]
+];

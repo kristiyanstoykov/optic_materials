@@ -1,0 +1,197 @@
+\doxysection{Suppliers Class Reference}
+\hypertarget{class_suppliers}{}\label{class_suppliers}\index{Suppliers@{Suppliers}}
+
+
+Class representing a collection of \doxylink{class_supplier}{Supplier} objects.  
+
+
+
+
+{\ttfamily \#include $<$suppliers.\+h$>$}
+
+Inheritance diagram for Suppliers\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_suppliers}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_suppliers_a8dd938d5803072f9b9f867ac2604eb5e}\label{class_suppliers_a8dd938d5803072f9b9f867ac2604eb5e} 
+{\bfseries Suppliers} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_suppliers}{Suppliers}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_suppliers_aaf2c7b0afb5a018e2358c3707001883c}{add\+Supplier}} (const \mbox{\hyperlink{class_supplier}{Supplier}} \&supplier)
+\begin{DoxyCompactList}\small\item\em Adds a \doxylink{class_supplier}{Supplier} object to the collection. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_supplier}{Supplier}} $>$ \mbox{\hyperlink{class_suppliers_a311e0f12db7b86ea25c49ce83fb9d83c}{get\+Suppliers}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves all suppliers in the collection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_supplier}{Supplier}} \mbox{\hyperlink{class_suppliers_a754a6c6693143f8b297871cad503f690}{get\+Supplier\+By\+Index}} (int index) const
+\begin{DoxyCompactList}\small\item\em Retrieves a \doxylink{class_supplier}{Supplier} object at a specified index in the collection. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_suppliers_ababe40801a08c7f0ba088d1517f658c6}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Gets the number of suppliers in the collection. \end{DoxyCompactList}\item 
+\Hypertarget{class_suppliers_a225fb2c41a3f6e76e51bb0af77fabb5d}\label{class_suppliers_a225fb2c41a3f6e76e51bb0af77fabb5d} 
+void {\bfseries print\+\_\+on\+\_\+one\+\_\+line} () const
+\begin{DoxyCompactList}\small\item\em Prints a concise one-\/line description of each supplier in the collection. \end{DoxyCompactList}\item 
+ostream \& \mbox{\hyperlink{class_suppliers_ad40aad0713753f04c867483f2f2562e1}{print}} (ostream \&output) const override
+\begin{DoxyCompactList}\small\item\em Overridden method for printing the collection\textquotesingle{}s details to an output stream. \end{DoxyCompactList}\item 
+istream \& \mbox{\hyperlink{class_suppliers_ac6a19188cf1414da64adf064f3e20470}{input}} (istream \&input) override
+\begin{DoxyCompactList}\small\item\em Overridden method for reading data into the collection from an input stream. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_suppliers_a92ee527d234aba172e72b234334dc1d0}{to\+\_\+json}} (json \&j) const override
+\begin{DoxyCompactList}\small\item\em Overridden method for converting the collection\textquotesingle{}s state to JSON format. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_suppliers_afa72b0b11030a84540a9d9582dbb0db5}{from\+\_\+json}} (json \&j) override
+\begin{DoxyCompactList}\small\item\em Overridden method for setting the collection\textquotesingle{}s state from JSON format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing a collection of \doxylink{class_supplier}{Supplier} objects. 
+
+This class manages a collection of \doxylink{class_supplier}{Supplier} objects and provides methods for adding suppliers and accessing them. It extends the \doxylink{class_base}{Base} class, implementing serialization and deserialization to/from streams and JSON. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_suppliers_aaf2c7b0afb5a018e2358c3707001883c}\label{class_suppliers_aaf2c7b0afb5a018e2358c3707001883c} 
+\index{Suppliers@{Suppliers}!addSupplier@{addSupplier}}
+\index{addSupplier@{addSupplier}!Suppliers@{Suppliers}}
+\doxysubsubsection{\texorpdfstring{addSupplier()}{addSupplier()}}
+{\footnotesize\ttfamily void Suppliers\+::add\+Supplier (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_supplier}{Supplier}} \&}]{supplier }\end{DoxyParamCaption})}
+
+
+
+Adds a \doxylink{class_supplier}{Supplier} object to the collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em supplier} & The \doxylink{class_supplier}{Supplier} object to be added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_suppliers_afa72b0b11030a84540a9d9582dbb0db5}\label{class_suppliers_afa72b0b11030a84540a9d9582dbb0db5} 
+\index{Suppliers@{Suppliers}!from\_json@{from\_json}}
+\index{from\_json@{from\_json}!Suppliers@{Suppliers}}
+\doxysubsubsection{\texorpdfstring{from\_json()}{from\_json()}}
+{\footnotesize\ttfamily void Suppliers\+::from\+\_\+json (\begin{DoxyParamCaption}\item[{json \&}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overridden method for setting the collection\textquotesingle{}s state from JSON format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & JSON object from which the collection\textquotesingle{}s state is to be read. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_base}{Base}}.
+
+\Hypertarget{class_suppliers_ababe40801a08c7f0ba088d1517f658c6}\label{class_suppliers_ababe40801a08c7f0ba088d1517f658c6} 
+\index{Suppliers@{Suppliers}!getSize@{getSize}}
+\index{getSize@{getSize}!Suppliers@{Suppliers}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily int Suppliers\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the number of suppliers in the collection. 
+
+\begin{DoxyReturn}{Returns}
+The size of the suppliers collection. 
+\end{DoxyReturn}
+\Hypertarget{class_suppliers_a754a6c6693143f8b297871cad503f690}\label{class_suppliers_a754a6c6693143f8b297871cad503f690} 
+\index{Suppliers@{Suppliers}!getSupplierByIndex@{getSupplierByIndex}}
+\index{getSupplierByIndex@{getSupplierByIndex}!Suppliers@{Suppliers}}
+\doxysubsubsection{\texorpdfstring{getSupplierByIndex()}{getSupplierByIndex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_supplier}{Supplier}} Suppliers\+::get\+Supplier\+By\+Index (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves a \doxylink{class_supplier}{Supplier} object at a specified index in the collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the \doxylink{class_supplier}{Supplier} object to retrieve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \doxylink{class_supplier}{Supplier} object at the specified index. 
+\end{DoxyReturn}
+\Hypertarget{class_suppliers_a311e0f12db7b86ea25c49ce83fb9d83c}\label{class_suppliers_a311e0f12db7b86ea25c49ce83fb9d83c} 
+\index{Suppliers@{Suppliers}!getSuppliers@{getSuppliers}}
+\index{getSuppliers@{getSuppliers}!Suppliers@{Suppliers}}
+\doxysubsubsection{\texorpdfstring{getSuppliers()}{getSuppliers()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_supplier}{Supplier}} $>$ Suppliers\+::get\+Suppliers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves all suppliers in the collection. 
+
+\begin{DoxyReturn}{Returns}
+A vector containing all \doxylink{class_supplier}{Supplier} objects in the collection. 
+\end{DoxyReturn}
+\Hypertarget{class_suppliers_ac6a19188cf1414da64adf064f3e20470}\label{class_suppliers_ac6a19188cf1414da64adf064f3e20470} 
+\index{Suppliers@{Suppliers}!input@{input}}
+\index{input@{input}!Suppliers@{Suppliers}}
+\doxysubsubsection{\texorpdfstring{input()}{input()}}
+{\footnotesize\ttfamily istream \& Suppliers\+::input (\begin{DoxyParamCaption}\item[{istream \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overridden method for reading data into the collection from an input stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The input stream from which the data is to be read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the modified input stream. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_base}{Base}}.
+
+\Hypertarget{class_suppliers_ad40aad0713753f04c867483f2f2562e1}\label{class_suppliers_ad40aad0713753f04c867483f2f2562e1} 
+\index{Suppliers@{Suppliers}!print@{print}}
+\index{print@{print}!Suppliers@{Suppliers}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily ostream \& Suppliers\+::print (\begin{DoxyParamCaption}\item[{ostream \&}]{output }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overridden method for printing the collection\textquotesingle{}s details to an output stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em output} & The output stream to which the collection\textquotesingle{}s data is to be written. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the modified output stream. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_base}{Base}}.
+
+\Hypertarget{class_suppliers_a92ee527d234aba172e72b234334dc1d0}\label{class_suppliers_a92ee527d234aba172e72b234334dc1d0} 
+\index{Suppliers@{Suppliers}!to\_json@{to\_json}}
+\index{to\_json@{to\_json}!Suppliers@{Suppliers}}
+\doxysubsubsection{\texorpdfstring{to\_json()}{to\_json()}}
+{\footnotesize\ttfamily void Suppliers\+::to\+\_\+json (\begin{DoxyParamCaption}\item[{json \&}]{j }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overridden method for converting the collection\textquotesingle{}s state to JSON format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & JSON object to which the collection\textquotesingle{}s state is to be written. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_base}{Base}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+suppliers.\+h\item 
+suppliers.\+cpp\end{DoxyCompactItemize}

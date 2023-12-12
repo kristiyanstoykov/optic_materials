@@ -1,0 +1,213 @@
+\doxysection{Orders Class Reference}
+\hypertarget{class_orders}{}\label{class_orders}\index{Orders@{Orders}}
+
+
+Class representing a collection of \doxylink{class_order}{Order} objects.  
+
+
+
+
+{\ttfamily \#include $<$orders.\+h$>$}
+
+Inheritance diagram for Orders\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_orders}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_orders_aeb61f503a055210e9aba2c5aff6911d4}\label{class_orders_aeb61f503a055210e9aba2c5aff6911d4} 
+{\bfseries Orders} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_orders}{Orders}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_orders_aedbcf06d60a4b12dd4ab520d876abbd4}{add\+Order}} (const \mbox{\hyperlink{class_order}{Order}} \&order)
+\begin{DoxyCompactList}\small\item\em Adds an \doxylink{class_order}{Order} object to the collection. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_order}{Order}} $>$ \mbox{\hyperlink{class_orders_ada1a41ff6ed451bef7f69c09de6f3d6e}{get\+Orders}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves all orders in the collection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_orders_a42d3da8100f3f455fda41f74733a44e4}{add\+Material\+To\+Last\+Order}} (const \mbox{\hyperlink{class_optic___material}{Optic\+\_\+\+Material}} \&material)
+\begin{DoxyCompactList}\small\item\em Adds an optic material to the last order in the collection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_orders_a29414261d4dead9772eeb713ee451b60}{add\+Supplier\+To\+Last\+Order}} (const \mbox{\hyperlink{class_supplier}{Supplier}} \&supplier)
+\begin{DoxyCompactList}\small\item\em Adds a supplier to the last order in the collection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_orders_a752eee42d61ef2e77b7a886608e5f123}{add\+Id\+To\+Last\+Order}} (int id)
+\begin{DoxyCompactList}\small\item\em Sets the ID for the last order in the collection. \end{DoxyCompactList}\item 
+\Hypertarget{class_orders_aee25620c1fb0c20f8af38b1276bfa4b1}\label{class_orders_aee25620c1fb0c20f8af38b1276bfa4b1} 
+void {\bfseries print\+Order\+Total} ()
+\begin{DoxyCompactList}\small\item\em Prints the total cost of each order in the collection. \end{DoxyCompactList}\item 
+ostream \& \mbox{\hyperlink{class_orders_a222588fed85119e6dbd79ee1458d87f5}{print}} (ostream \&output) const override
+\begin{DoxyCompactList}\small\item\em Overridden method for printing the collection\textquotesingle{}s details to an output stream. \end{DoxyCompactList}\item 
+istream \& \mbox{\hyperlink{class_orders_a0044c43cc05bd3073efedd583e7bc538}{input}} (istream \&input) override
+\begin{DoxyCompactList}\small\item\em Overridden method for reading data into the collection from an input stream. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_orders_a8c9edd7dbc085597ae43626b0da51763}{to\+\_\+json}} (json \&j) const override
+\begin{DoxyCompactList}\small\item\em Overridden method for converting the collection\textquotesingle{}s state to JSON format. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_orders_aa34c51cd3f006808050c4e1d291caca2}{from\+\_\+json}} (json \&j) override
+\begin{DoxyCompactList}\small\item\em Overridden method for setting the collection\textquotesingle{}s state from JSON format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing a collection of \doxylink{class_order}{Order} objects. 
+
+This class manages a collection of \doxylink{class_order}{Order} objects and provides methods for adding orders and managing their contents. It extends the \doxylink{class_base}{Base} class, implementing serialization and deserialization to/from streams and JSON. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_orders_a752eee42d61ef2e77b7a886608e5f123}\label{class_orders_a752eee42d61ef2e77b7a886608e5f123} 
+\index{Orders@{Orders}!addIdToLastOrder@{addIdToLastOrder}}
+\index{addIdToLastOrder@{addIdToLastOrder}!Orders@{Orders}}
+\doxysubsubsection{\texorpdfstring{addIdToLastOrder()}{addIdToLastOrder()}}
+{\footnotesize\ttfamily void Orders\+::add\+Id\+To\+Last\+Order (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Sets the ID for the last order in the collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The unique identifier for the last order. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_orders_a42d3da8100f3f455fda41f74733a44e4}\label{class_orders_a42d3da8100f3f455fda41f74733a44e4} 
+\index{Orders@{Orders}!addMaterialToLastOrder@{addMaterialToLastOrder}}
+\index{addMaterialToLastOrder@{addMaterialToLastOrder}!Orders@{Orders}}
+\doxysubsubsection{\texorpdfstring{addMaterialToLastOrder()}{addMaterialToLastOrder()}}
+{\footnotesize\ttfamily void Orders\+::add\+Material\+To\+Last\+Order (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_optic___material}{Optic\+\_\+\+Material}} \&}]{material }\end{DoxyParamCaption})}
+
+
+
+Adds an optic material to the last order in the collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material} & The \doxylink{class_optic___material}{Optic\+\_\+\+Material} object to be added to the last order. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_orders_aedbcf06d60a4b12dd4ab520d876abbd4}\label{class_orders_aedbcf06d60a4b12dd4ab520d876abbd4} 
+\index{Orders@{Orders}!addOrder@{addOrder}}
+\index{addOrder@{addOrder}!Orders@{Orders}}
+\doxysubsubsection{\texorpdfstring{addOrder()}{addOrder()}}
+{\footnotesize\ttfamily void Orders\+::add\+Order (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_order}{Order}} \&}]{order }\end{DoxyParamCaption})}
+
+
+
+Adds an \doxylink{class_order}{Order} object to the collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & The \doxylink{class_order}{Order} object to be added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_orders_a29414261d4dead9772eeb713ee451b60}\label{class_orders_a29414261d4dead9772eeb713ee451b60} 
+\index{Orders@{Orders}!addSupplierToLastOrder@{addSupplierToLastOrder}}
+\index{addSupplierToLastOrder@{addSupplierToLastOrder}!Orders@{Orders}}
+\doxysubsubsection{\texorpdfstring{addSupplierToLastOrder()}{addSupplierToLastOrder()}}
+{\footnotesize\ttfamily void Orders\+::add\+Supplier\+To\+Last\+Order (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_supplier}{Supplier}} \&}]{supplier }\end{DoxyParamCaption})}
+
+
+
+Adds a supplier to the last order in the collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em supplier} & The \doxylink{class_supplier}{Supplier} to be associated with the last order. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_orders_aa34c51cd3f006808050c4e1d291caca2}\label{class_orders_aa34c51cd3f006808050c4e1d291caca2} 
+\index{Orders@{Orders}!from\_json@{from\_json}}
+\index{from\_json@{from\_json}!Orders@{Orders}}
+\doxysubsubsection{\texorpdfstring{from\_json()}{from\_json()}}
+{\footnotesize\ttfamily void Orders\+::from\+\_\+json (\begin{DoxyParamCaption}\item[{json \&}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overridden method for setting the collection\textquotesingle{}s state from JSON format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & JSON object from which the collection\textquotesingle{}s state is to be read. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_base}{Base}}.
+
+\Hypertarget{class_orders_ada1a41ff6ed451bef7f69c09de6f3d6e}\label{class_orders_ada1a41ff6ed451bef7f69c09de6f3d6e} 
+\index{Orders@{Orders}!getOrders@{getOrders}}
+\index{getOrders@{getOrders}!Orders@{Orders}}
+\doxysubsubsection{\texorpdfstring{getOrders()}{getOrders()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_order}{Order}} $>$ Orders\+::get\+Orders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves all orders in the collection. 
+
+\begin{DoxyReturn}{Returns}
+A vector containing all \doxylink{class_order}{Order} objects in the collection. 
+\end{DoxyReturn}
+\Hypertarget{class_orders_a0044c43cc05bd3073efedd583e7bc538}\label{class_orders_a0044c43cc05bd3073efedd583e7bc538} 
+\index{Orders@{Orders}!input@{input}}
+\index{input@{input}!Orders@{Orders}}
+\doxysubsubsection{\texorpdfstring{input()}{input()}}
+{\footnotesize\ttfamily istream \& Orders\+::input (\begin{DoxyParamCaption}\item[{istream \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overridden method for reading data into the collection from an input stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The input stream from which the data is to be read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the modified input stream. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_base}{Base}}.
+
+\Hypertarget{class_orders_a222588fed85119e6dbd79ee1458d87f5}\label{class_orders_a222588fed85119e6dbd79ee1458d87f5} 
+\index{Orders@{Orders}!print@{print}}
+\index{print@{print}!Orders@{Orders}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily ostream \& Orders\+::print (\begin{DoxyParamCaption}\item[{ostream \&}]{output }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overridden method for printing the collection\textquotesingle{}s details to an output stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em output} & The output stream to which the collection\textquotesingle{}s data is to be written. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the modified output stream. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_base}{Base}}.
+
+\Hypertarget{class_orders_a8c9edd7dbc085597ae43626b0da51763}\label{class_orders_a8c9edd7dbc085597ae43626b0da51763} 
+\index{Orders@{Orders}!to\_json@{to\_json}}
+\index{to\_json@{to\_json}!Orders@{Orders}}
+\doxysubsubsection{\texorpdfstring{to\_json()}{to\_json()}}
+{\footnotesize\ttfamily void Orders\+::to\+\_\+json (\begin{DoxyParamCaption}\item[{json \&}]{j }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overridden method for converting the collection\textquotesingle{}s state to JSON format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & JSON object to which the collection\textquotesingle{}s state is to be written. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_base}{Base}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+orders.\+h\item 
+orders.\+cpp\end{DoxyCompactItemize}

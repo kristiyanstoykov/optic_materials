@@ -1,0 +1,59 @@
+\doxysection{optic\+\_\+material.\+h}
+\hypertarget{optic__material_8h_source}{}\label{optic__material_8h_source}\index{optic\_material.h@{optic\_material.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ OPTIC\_MATERIAL\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ OPTIC\_MATERIAL\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}base.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_optic___material}{Optic\_Material}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_base}{Base}}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{string}\ type;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{double}\ width;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{double}\ diopter;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{string}\ name;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{double}\ price;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_optic___material_ad2765c9aec87f4d8378ff51056cfda6f}{Optic\_Material}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_optic___material_a1887f2b157295828ff67b5bc59f4d4a3}{Optic\_Material}}(\textcolor{keywordtype}{string}\ type,\ \textcolor{keywordtype}{double}\ width,\ \textcolor{keywordtype}{double}\ diopter,\ \textcolor{keywordtype}{string}\ name,\ \textcolor{keywordtype}{double}\ price);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_optic___material_a1c2b05d9c5212bdc2f9d36281a912633}{getType}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_optic___material_a57a46bc57b3590895e275dba817134d2}{setType}}(\textcolor{keywordtype}{string}\ type);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_optic___material_a4270312c704fbb5424efb1b17993cc45}{getWidth}}()\textcolor{keyword}{const};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_optic___material_af178e241792066434ab058787782aa81}{setWidth}}(\textcolor{keywordtype}{double}\ width);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_optic___material_aa0e11793faa4cca1c0e783084c679cfa}{getDiopter}}()\textcolor{keyword}{const};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_optic___material_a1fdce7c67aaedbab53b6d57b5decdd3a}{setDiopter}}(\textcolor{keywordtype}{double}\ diopter);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_optic___material_a3c89af394b82d4ed4bd606b59dc0ca2d}{getName}}()\textcolor{keyword}{const};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_optic___material_a543a5ac02d1b5cc1d84b41bca2f35650}{setName}}(\textcolor{keywordtype}{string}\ name);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_optic___material_a0d2641aa613e96d7faa7e245ecaa74df}{getPrice}}()\textcolor{keyword}{const};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_optic___material_aa10a6226047fe4d9ba186ba1520c72fd}{setPrice}}(\textcolor{keywordtype}{double}\ price);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00108\ \ \ \ \ ostream\&\ \mbox{\hyperlink{class_optic___material_ab1b82b0b79244d30846538b3c856620e}{print}}(ostream\&\ output)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00115\ \ \ \ \ istream\&\ \mbox{\hyperlink{class_optic___material_a8a6618f5f055731a3b26406724abb2f8}{input}}(istream\&\ \mbox{\hyperlink{class_optic___material_a8a6618f5f055731a3b26406724abb2f8}{input}})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_optic___material_a1ee9dbecb23609a8be27963a6a9dcf66}{to\_json}}(json\&\ j)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_optic___material_a6ff0fb3abc61a71f75aca59c78faf71d}{from\_json}}(json\&\ j)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00128\ \};}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

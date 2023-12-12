@@ -1,0 +1,315 @@
+\doxysection{Supplier Class Reference}
+\hypertarget{class_supplier}{}\label{class_supplier}\index{Supplier@{Supplier}}
+
+
+Class representing a supplier in the optics materials system.  
+
+
+
+
+{\ttfamily \#include $<$supplier.\+h$>$}
+
+Inheritance diagram for Supplier\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_supplier}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_supplier_a66d951269f747521d6342d6f815e98af}\label{class_supplier_a66d951269f747521d6342d6f815e98af} 
+{\bfseries Supplier} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_supplier}{Supplier}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_supplier_a90048452f538b5e86566e9d17e48f6a2}{Supplier}} (std\+::string bulstat, std\+::string name, std\+::string location, std\+::string phone, double profit\+\_\+margin)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_supplier}{Supplier} with parameters. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_supplier_a32770f1f5bc97789c5c0f1e21465ae76}{get\+Bulstat}} () const
+\begin{DoxyCompactList}\small\item\em Gets the unique identifier of the supplier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_supplier_a406ed19af5a2c112149c719916f260b6}{set\+Bulstat}} (std\+::string bulstat)
+\begin{DoxyCompactList}\small\item\em Sets the unique identifier of the supplier. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_supplier_adeece099a480ea8985f998722e724dc7}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the supplier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_supplier_a1c5ae7bdd5518932960aa593201cf279}{set\+Name}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Sets the name of the supplier. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_supplier_ab889b6fb1fd64c861f7fac2a54f03606}{get\+Location}} () const
+\begin{DoxyCompactList}\small\item\em Gets the location of the supplier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_supplier_a3a590344d2b02606e5bd6c1f37ea1b6c}{set\+Location}} (std\+::string location)
+\begin{DoxyCompactList}\small\item\em Sets the location of the supplier. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_supplier_ae9bd1e10d0c7ad87a27ad38c64fcfd5e}{get\+Phone}} () const
+\begin{DoxyCompactList}\small\item\em Gets the contact phone number of the supplier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_supplier_a69278529457a6e023785e476983a5678}{set\+Phone}} (std\+::string phone)
+\begin{DoxyCompactList}\small\item\em Sets the contact phone number of the supplier. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_supplier_ae768b4b924aadd7270efad3fefd5fa41}{get\+Profit\+Margin}} () const
+\begin{DoxyCompactList}\small\item\em Gets the profit margin of the supplier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_supplier_a3a2b3aaf8e86980bc3b3998122e41893}{set\+Profit\+Margin}} (double profit\+\_\+margin)
+\begin{DoxyCompactList}\small\item\em Sets the profit margin for the supplier. \end{DoxyCompactList}\item 
+ostream \& \mbox{\hyperlink{class_supplier_a6b2b7336b1684d81e7ddabcae323063c}{print}} (ostream \&output) const override
+\begin{DoxyCompactList}\small\item\em Overridden method for printing the supplier\textquotesingle{}s details to an output stream. \end{DoxyCompactList}\item 
+istream \& \mbox{\hyperlink{class_supplier_a9239aa9309c6e114182c0aadba258878}{input}} (istream \&input) override
+\begin{DoxyCompactList}\small\item\em Overridden method for reading data into the supplier from an input stream. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_supplier_aa8482bd0183e7163df7684145bdde6bf}{to\+\_\+json}} (nlohmann\+::json \&j) const override
+\begin{DoxyCompactList}\small\item\em Overridden method for converting the supplier\textquotesingle{}s state to JSON format. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_supplier_afc09053496491c271dae80d517adac3c}{from\+\_\+json}} (json \&j) override
+\begin{DoxyCompactList}\small\item\em Overridden method for setting the supplier\textquotesingle{}s state from JSON format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing a supplier in the optics materials system. 
+
+This class stores details about a supplier, including identification, contact information, and profit margin. It extends the \doxylink{class_base}{Base} class, providing implementations for serialization and deserialization to/from streams and JSON. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_supplier_a90048452f538b5e86566e9d17e48f6a2}\label{class_supplier_a90048452f538b5e86566e9d17e48f6a2} 
+\index{Supplier@{Supplier}!Supplier@{Supplier}}
+\index{Supplier@{Supplier}!Supplier@{Supplier}}
+\doxysubsubsection{\texorpdfstring{Supplier()}{Supplier()}}
+{\footnotesize\ttfamily Supplier\+::\+Supplier (\begin{DoxyParamCaption}\item[{std\+::string}]{bulstat,  }\item[{std\+::string}]{name,  }\item[{std\+::string}]{location,  }\item[{std\+::string}]{phone,  }\item[{double}]{profit\+\_\+margin }\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{class_supplier}{Supplier} with parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bulstat} & The unique identifier for the supplier. \\
+\hline
+{\em name} & The name of the supplier. \\
+\hline
+{\em location} & The location of the supplier. \\
+\hline
+{\em phone} & The contact phone number of the supplier. \\
+\hline
+{\em profit\+\_\+margin} & The profit margin of the supplier. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_supplier_afc09053496491c271dae80d517adac3c}\label{class_supplier_afc09053496491c271dae80d517adac3c} 
+\index{Supplier@{Supplier}!from\_json@{from\_json}}
+\index{from\_json@{from\_json}!Supplier@{Supplier}}
+\doxysubsubsection{\texorpdfstring{from\_json()}{from\_json()}}
+{\footnotesize\ttfamily void Supplier\+::from\+\_\+json (\begin{DoxyParamCaption}\item[{json \&}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overridden method for setting the supplier\textquotesingle{}s state from JSON format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & JSON object from which the supplier\textquotesingle{}s state is to be read. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_base}{Base}}.
+
+\Hypertarget{class_supplier_a32770f1f5bc97789c5c0f1e21465ae76}\label{class_supplier_a32770f1f5bc97789c5c0f1e21465ae76} 
+\index{Supplier@{Supplier}!getBulstat@{getBulstat}}
+\index{getBulstat@{getBulstat}!Supplier@{Supplier}}
+\doxysubsubsection{\texorpdfstring{getBulstat()}{getBulstat()}}
+{\footnotesize\ttfamily std\+::string Supplier\+::get\+Bulstat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the unique identifier of the supplier. 
+
+\begin{DoxyReturn}{Returns}
+The bulstat of the supplier. 
+\end{DoxyReturn}
+\Hypertarget{class_supplier_ab889b6fb1fd64c861f7fac2a54f03606}\label{class_supplier_ab889b6fb1fd64c861f7fac2a54f03606} 
+\index{Supplier@{Supplier}!getLocation@{getLocation}}
+\index{getLocation@{getLocation}!Supplier@{Supplier}}
+\doxysubsubsection{\texorpdfstring{getLocation()}{getLocation()}}
+{\footnotesize\ttfamily std\+::string Supplier\+::get\+Location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the location of the supplier. 
+
+\begin{DoxyReturn}{Returns}
+The location of the supplier. 
+\end{DoxyReturn}
+\Hypertarget{class_supplier_adeece099a480ea8985f998722e724dc7}\label{class_supplier_adeece099a480ea8985f998722e724dc7} 
+\index{Supplier@{Supplier}!getName@{getName}}
+\index{getName@{getName}!Supplier@{Supplier}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Supplier\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the name of the supplier. 
+
+\begin{DoxyReturn}{Returns}
+The name of the supplier. 
+\end{DoxyReturn}
+\Hypertarget{class_supplier_ae9bd1e10d0c7ad87a27ad38c64fcfd5e}\label{class_supplier_ae9bd1e10d0c7ad87a27ad38c64fcfd5e} 
+\index{Supplier@{Supplier}!getPhone@{getPhone}}
+\index{getPhone@{getPhone}!Supplier@{Supplier}}
+\doxysubsubsection{\texorpdfstring{getPhone()}{getPhone()}}
+{\footnotesize\ttfamily std\+::string Supplier\+::get\+Phone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the contact phone number of the supplier. 
+
+\begin{DoxyReturn}{Returns}
+The phone number of the supplier. 
+\end{DoxyReturn}
+\Hypertarget{class_supplier_ae768b4b924aadd7270efad3fefd5fa41}\label{class_supplier_ae768b4b924aadd7270efad3fefd5fa41} 
+\index{Supplier@{Supplier}!getProfitMargin@{getProfitMargin}}
+\index{getProfitMargin@{getProfitMargin}!Supplier@{Supplier}}
+\doxysubsubsection{\texorpdfstring{getProfitMargin()}{getProfitMargin()}}
+{\footnotesize\ttfamily double Supplier\+::get\+Profit\+Margin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the profit margin of the supplier. 
+
+\begin{DoxyReturn}{Returns}
+The profit margin of the supplier. 
+\end{DoxyReturn}
+\Hypertarget{class_supplier_a9239aa9309c6e114182c0aadba258878}\label{class_supplier_a9239aa9309c6e114182c0aadba258878} 
+\index{Supplier@{Supplier}!input@{input}}
+\index{input@{input}!Supplier@{Supplier}}
+\doxysubsubsection{\texorpdfstring{input()}{input()}}
+{\footnotesize\ttfamily istream \& Supplier\+::input (\begin{DoxyParamCaption}\item[{istream \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overridden method for reading data into the supplier from an input stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The input stream from which the supplier data is to be read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the modified input stream. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_base}{Base}}.
+
+\Hypertarget{class_supplier_a6b2b7336b1684d81e7ddabcae323063c}\label{class_supplier_a6b2b7336b1684d81e7ddabcae323063c} 
+\index{Supplier@{Supplier}!print@{print}}
+\index{print@{print}!Supplier@{Supplier}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily ostream \& Supplier\+::print (\begin{DoxyParamCaption}\item[{ostream \&}]{output }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overridden method for printing the supplier\textquotesingle{}s details to an output stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em output} & The output stream to which the supplier\textquotesingle{}s data is to be written. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the modified output stream. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_base}{Base}}.
+
+\Hypertarget{class_supplier_a406ed19af5a2c112149c719916f260b6}\label{class_supplier_a406ed19af5a2c112149c719916f260b6} 
+\index{Supplier@{Supplier}!setBulstat@{setBulstat}}
+\index{setBulstat@{setBulstat}!Supplier@{Supplier}}
+\doxysubsubsection{\texorpdfstring{setBulstat()}{setBulstat()}}
+{\footnotesize\ttfamily void Supplier\+::set\+Bulstat (\begin{DoxyParamCaption}\item[{std\+::string}]{bulstat }\end{DoxyParamCaption})}
+
+
+
+Sets the unique identifier of the supplier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bulstat} & The bulstat to set for the supplier. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_supplier_a3a590344d2b02606e5bd6c1f37ea1b6c}\label{class_supplier_a3a590344d2b02606e5bd6c1f37ea1b6c} 
+\index{Supplier@{Supplier}!setLocation@{setLocation}}
+\index{setLocation@{setLocation}!Supplier@{Supplier}}
+\doxysubsubsection{\texorpdfstring{setLocation()}{setLocation()}}
+{\footnotesize\ttfamily void Supplier\+::set\+Location (\begin{DoxyParamCaption}\item[{std\+::string}]{location }\end{DoxyParamCaption})}
+
+
+
+Sets the location of the supplier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em location} & The location to set for the supplier. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_supplier_a1c5ae7bdd5518932960aa593201cf279}\label{class_supplier_a1c5ae7bdd5518932960aa593201cf279} 
+\index{Supplier@{Supplier}!setName@{setName}}
+\index{setName@{setName}!Supplier@{Supplier}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void Supplier\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Sets the name of the supplier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name to set for the supplier. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_supplier_a69278529457a6e023785e476983a5678}\label{class_supplier_a69278529457a6e023785e476983a5678} 
+\index{Supplier@{Supplier}!setPhone@{setPhone}}
+\index{setPhone@{setPhone}!Supplier@{Supplier}}
+\doxysubsubsection{\texorpdfstring{setPhone()}{setPhone()}}
+{\footnotesize\ttfamily void Supplier\+::set\+Phone (\begin{DoxyParamCaption}\item[{std\+::string}]{phone }\end{DoxyParamCaption})}
+
+
+
+Sets the contact phone number of the supplier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phone} & The phone number to set for the supplier. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_supplier_a3a2b3aaf8e86980bc3b3998122e41893}\label{class_supplier_a3a2b3aaf8e86980bc3b3998122e41893} 
+\index{Supplier@{Supplier}!setProfitMargin@{setProfitMargin}}
+\index{setProfitMargin@{setProfitMargin}!Supplier@{Supplier}}
+\doxysubsubsection{\texorpdfstring{setProfitMargin()}{setProfitMargin()}}
+{\footnotesize\ttfamily void Supplier\+::set\+Profit\+Margin (\begin{DoxyParamCaption}\item[{double}]{profit\+\_\+margin }\end{DoxyParamCaption})}
+
+
+
+Sets the profit margin for the supplier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em profit\+\_\+margin} & The profit margin to set for the supplier. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_supplier_aa8482bd0183e7163df7684145bdde6bf}\label{class_supplier_aa8482bd0183e7163df7684145bdde6bf} 
+\index{Supplier@{Supplier}!to\_json@{to\_json}}
+\index{to\_json@{to\_json}!Supplier@{Supplier}}
+\doxysubsubsection{\texorpdfstring{to\_json()}{to\_json()}}
+{\footnotesize\ttfamily void Supplier\+::to\+\_\+json (\begin{DoxyParamCaption}\item[{nlohmann\+::json \&}]{j }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overridden method for converting the supplier\textquotesingle{}s state to JSON format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & JSON object to which the supplier\textquotesingle{}s state is to be written. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_base}{Base}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+supplier.\+h\item 
+supplier.\+cpp\end{DoxyCompactItemize}

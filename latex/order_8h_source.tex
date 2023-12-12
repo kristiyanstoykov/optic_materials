@@ -1,0 +1,52 @@
+\doxysection{order.\+h}
+\hypertarget{order_8h_source}{}\label{order_8h_source}\index{order.h@{order.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ORDER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ORDER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}supplier.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}optic\_material.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_order}{Order}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_base}{Base}}}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{00021\ \ \ \ \ vector<Optic\_Material>\ materials;}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_supplier}{Supplier}}\ supplier;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_order_a7b6a660b03708ed5b4e1c4a6dc2a664a}{Order}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_order_a7b6a660b03708ed5b4e1c4a6dc2a664a}{Order}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ vector<Optic\_Material>\ materials,\ \mbox{\hyperlink{class_supplier}{Supplier}}\ supplier);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_order_ac2e6861304117b7f0170af983ec4ad14}{setId}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_order_a789df41dc9e5c611cd16d930bba49b8d}{getId}}();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \ \ \ \ vector<Optic\_Material>\ \mbox{\hyperlink{class_order_a1cced690627eef6886f075468bad1354}{getMaterials}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_order_af8bb95f3d13fae2da0cfe69b7c71cb24}{addMaterial}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_optic___material}{Optic\_Material}}\&\ material);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_order_a48a8438a2ae5c5beff8fabe5669da56c}{addSupplier}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_supplier}{Supplier}}\&\ supplier);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{class_supplier}{Supplier}}\ \mbox{\hyperlink{class_order_a05043ed7e4d48af9199e08ddb743db04}{getSupplier}}();}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_order_a5018d1f9dc1372063ca59c0a67fcc258}{getTotalRaw}}();}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_order_a62ff67f913e6d1e539ce2e3f4e0006ea}{getTotal}}();}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00091\ \ \ \ \ ostream\&\ \mbox{\hyperlink{class_order_a20e3e4a27cf519bf76b2d10722836528}{print}}(ostream\&\ output)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00098\ \ \ \ \ istream\&\ \mbox{\hyperlink{class_order_a4158a25510ec5151779f0f71cb99555c}{input}}(istream\&\ \mbox{\hyperlink{class_order_a4158a25510ec5151779f0f71cb99555c}{input}})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_order_a6ae53dbb8c9f4054931742b9d7389925}{to\_json}}(json\&\ j)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_order_ac4131432c0ad6801fa7249089fa38d06}{from\_json}}(json\&\ j)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00111\ \};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

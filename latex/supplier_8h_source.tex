@@ -1,0 +1,57 @@
+\doxysection{supplier.\+h}
+\hypertarget{supplier_8h_source}{}\label{supplier_8h_source}\index{supplier.h@{supplier.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SUPPLIER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SUPPLIER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}base.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_supplier}{Supplier}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_base}{Base}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ std::string\ bulstat;}
+\DoxyCodeLine{00019\ \ \ \ \ std::string\ name;}
+\DoxyCodeLine{00020\ \ \ \ \ std::string\ location;}
+\DoxyCodeLine{00021\ \ \ \ \ std::string\ phone;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{double}\ profit\_margin;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_supplier_a66d951269f747521d6342d6f815e98af}{Supplier}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_supplier_a66d951269f747521d6342d6f815e98af}{Supplier}}(std::string\ bulstat,\ std::string\ name,\ std::string\ location,\ std::string\ phone,\ \textcolor{keywordtype}{double}\ profit\_margin);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ std::string\ \mbox{\hyperlink{class_supplier_a32770f1f5bc97789c5c0f1e21465ae76}{getBulstat}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_supplier_a406ed19af5a2c112149c719916f260b6}{setBulstat}}(std::string\ bulstat);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \ \ \ \ std::string\ \mbox{\hyperlink{class_supplier_adeece099a480ea8985f998722e724dc7}{getName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_supplier_a1c5ae7bdd5518932960aa593201cf279}{setName}}(std::string\ name);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00068\ \ \ \ \ std::string\ \mbox{\hyperlink{class_supplier_ab889b6fb1fd64c861f7fac2a54f03606}{getLocation}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_supplier_a3a590344d2b02606e5bd6c1f37ea1b6c}{setLocation}}(std::string\ location);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00080\ \ \ \ \ std::string\ \mbox{\hyperlink{class_supplier_ae9bd1e10d0c7ad87a27ad38c64fcfd5e}{getPhone}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_supplier_a69278529457a6e023785e476983a5678}{setPhone}}(std::string\ phone);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_supplier_ae768b4b924aadd7270efad3fefd5fa41}{getProfitMargin}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_supplier_a3a2b3aaf8e86980bc3b3998122e41893}{setProfitMargin}}(\textcolor{keywordtype}{double}\ profit\_margin);}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00105\ \ \ \ \ ostream\&\ \mbox{\hyperlink{class_supplier_a6b2b7336b1684d81e7ddabcae323063c}{print}}(ostream\&\ output)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00112\ \ \ \ \ istream\&\ \mbox{\hyperlink{class_supplier_a9239aa9309c6e114182c0aadba258878}{input}}(istream\&\ \mbox{\hyperlink{class_supplier_a9239aa9309c6e114182c0aadba258878}{input}})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_supplier_aa8482bd0183e7163df7684145bdde6bf}{to\_json}}(nlohmann::json\&\ j)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_supplier_afc09053496491c271dae80d517adac3c}{from\_json}}(json\&\ j)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00125\ \};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

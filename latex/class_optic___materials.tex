@@ -1,0 +1,197 @@
+\doxysection{Optic\+\_\+\+Materials Class Reference}
+\hypertarget{class_optic___materials}{}\label{class_optic___materials}\index{Optic\_Materials@{Optic\_Materials}}
+
+
+Class representing a collection of \doxylink{class_optic___material}{Optic\+\_\+\+Material} objects.  
+
+
+
+
+{\ttfamily \#include $<$optic\+\_\+materials.\+h$>$}
+
+Inheritance diagram for Optic\+\_\+\+Materials\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_optic___materials}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_optic___materials_a11465803817bd8798f2d95fb285200d5}\label{class_optic___materials_a11465803817bd8798f2d95fb285200d5} 
+{\bfseries Optic\+\_\+\+Materials} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_optic___materials}{Optic\+\_\+\+Materials}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_optic___materials_a193c8c0add2f6904c20cd8165758cc89}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Gets the number of optic materials in the collection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_optic___materials_aff8a239d4154eb110aa3b656a5e3cb44}{add\+Optic\+Material}} (const \mbox{\hyperlink{class_optic___material}{Optic\+\_\+\+Material}} \&optic\+\_\+material)
+\begin{DoxyCompactList}\small\item\em Adds an \doxylink{class_optic___material}{Optic\+\_\+\+Material} object to the collection. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_optic___material}{Optic\+\_\+\+Material}} $>$ \mbox{\hyperlink{class_optic___materials_a174d382824f49989fef82810ba9107ab}{get\+Optic\+Materials}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves all optic materials in the collection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_optic___material}{Optic\+\_\+\+Material}} \mbox{\hyperlink{class_optic___materials_a593e1b75366e1bac1e823a3c46a8006e}{get\+Optic\+Material\+By\+Index}} (int index) const
+\begin{DoxyCompactList}\small\item\em Retrieves an \doxylink{class_optic___material}{Optic\+\_\+\+Material} object at a specified index in the collection. \end{DoxyCompactList}\item 
+ostream \& \mbox{\hyperlink{class_optic___materials_a0dfc05f98314c88d6b497c2bd0e5a7db}{print}} (ostream \&output) const override
+\begin{DoxyCompactList}\small\item\em Overridden method for printing the collection\textquotesingle{}s details to an output stream. \end{DoxyCompactList}\item 
+\Hypertarget{class_optic___materials_ab690957f02283b4502b0d242778dc5d6}\label{class_optic___materials_ab690957f02283b4502b0d242778dc5d6} 
+void {\bfseries print\+\_\+on\+\_\+one\+\_\+line} () const
+\begin{DoxyCompactList}\small\item\em Prints a concise one-\/line description of each optic material in the collection. \end{DoxyCompactList}\item 
+istream \& \mbox{\hyperlink{class_optic___materials_aada3ef1036b5da309390bcee262bcdfa}{input}} (istream \&input) override
+\begin{DoxyCompactList}\small\item\em Overridden method for reading data into the collection from an input stream. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_optic___materials_a1e962fbf610006489e54d0aaa38f9f67}{to\+\_\+json}} (json \&j) const override
+\begin{DoxyCompactList}\small\item\em Overridden method for converting the collection\textquotesingle{}s state to JSON format. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_optic___materials_a280bc3de96a3da2ff9294c9f9a61b3c8}{from\+\_\+json}} (json \&j) override
+\begin{DoxyCompactList}\small\item\em Overridden method for setting the collection\textquotesingle{}s state from JSON format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing a collection of \doxylink{class_optic___material}{Optic\+\_\+\+Material} objects. 
+
+This class encapsulates a collection of \doxylink{class_optic___material}{Optic\+\_\+\+Material} objects and provides methods for managing this collection, including adding and retrieving optic materials, and implementing serialization and deserialization to/from streams and JSON. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_optic___materials_aff8a239d4154eb110aa3b656a5e3cb44}\label{class_optic___materials_aff8a239d4154eb110aa3b656a5e3cb44} 
+\index{Optic\_Materials@{Optic\_Materials}!addOpticMaterial@{addOpticMaterial}}
+\index{addOpticMaterial@{addOpticMaterial}!Optic\_Materials@{Optic\_Materials}}
+\doxysubsubsection{\texorpdfstring{addOpticMaterial()}{addOpticMaterial()}}
+{\footnotesize\ttfamily void Optic\+\_\+\+Materials\+::add\+Optic\+Material (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_optic___material}{Optic\+\_\+\+Material}} \&}]{optic\+\_\+material }\end{DoxyParamCaption})}
+
+
+
+Adds an \doxylink{class_optic___material}{Optic\+\_\+\+Material} object to the collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em optic\+\_\+material} & The \doxylink{class_optic___material}{Optic\+\_\+\+Material} object to be added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_optic___materials_a280bc3de96a3da2ff9294c9f9a61b3c8}\label{class_optic___materials_a280bc3de96a3da2ff9294c9f9a61b3c8} 
+\index{Optic\_Materials@{Optic\_Materials}!from\_json@{from\_json}}
+\index{from\_json@{from\_json}!Optic\_Materials@{Optic\_Materials}}
+\doxysubsubsection{\texorpdfstring{from\_json()}{from\_json()}}
+{\footnotesize\ttfamily void Optic\+\_\+\+Materials\+::from\+\_\+json (\begin{DoxyParamCaption}\item[{json \&}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overridden method for setting the collection\textquotesingle{}s state from JSON format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & JSON object from which the collection\textquotesingle{}s state is to be read. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_base}{Base}}.
+
+\Hypertarget{class_optic___materials_a593e1b75366e1bac1e823a3c46a8006e}\label{class_optic___materials_a593e1b75366e1bac1e823a3c46a8006e} 
+\index{Optic\_Materials@{Optic\_Materials}!getOpticMaterialByIndex@{getOpticMaterialByIndex}}
+\index{getOpticMaterialByIndex@{getOpticMaterialByIndex}!Optic\_Materials@{Optic\_Materials}}
+\doxysubsubsection{\texorpdfstring{getOpticMaterialByIndex()}{getOpticMaterialByIndex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_optic___material}{Optic\+\_\+\+Material}} Optic\+\_\+\+Materials\+::get\+Optic\+Material\+By\+Index (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves an \doxylink{class_optic___material}{Optic\+\_\+\+Material} object at a specified index in the collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the \doxylink{class_optic___material}{Optic\+\_\+\+Material} object to retrieve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \doxylink{class_optic___material}{Optic\+\_\+\+Material} object at the specified index. 
+\end{DoxyReturn}
+\Hypertarget{class_optic___materials_a174d382824f49989fef82810ba9107ab}\label{class_optic___materials_a174d382824f49989fef82810ba9107ab} 
+\index{Optic\_Materials@{Optic\_Materials}!getOpticMaterials@{getOpticMaterials}}
+\index{getOpticMaterials@{getOpticMaterials}!Optic\_Materials@{Optic\_Materials}}
+\doxysubsubsection{\texorpdfstring{getOpticMaterials()}{getOpticMaterials()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_optic___material}{Optic\+\_\+\+Material}} $>$ Optic\+\_\+\+Materials\+::get\+Optic\+Materials (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves all optic materials in the collection. 
+
+\begin{DoxyReturn}{Returns}
+A vector containing all \doxylink{class_optic___material}{Optic\+\_\+\+Material} objects in the collection. 
+\end{DoxyReturn}
+\Hypertarget{class_optic___materials_a193c8c0add2f6904c20cd8165758cc89}\label{class_optic___materials_a193c8c0add2f6904c20cd8165758cc89} 
+\index{Optic\_Materials@{Optic\_Materials}!getSize@{getSize}}
+\index{getSize@{getSize}!Optic\_Materials@{Optic\_Materials}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily int Optic\+\_\+\+Materials\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the number of optic materials in the collection. 
+
+\begin{DoxyReturn}{Returns}
+The size of the optic materials collection. 
+\end{DoxyReturn}
+\Hypertarget{class_optic___materials_aada3ef1036b5da309390bcee262bcdfa}\label{class_optic___materials_aada3ef1036b5da309390bcee262bcdfa} 
+\index{Optic\_Materials@{Optic\_Materials}!input@{input}}
+\index{input@{input}!Optic\_Materials@{Optic\_Materials}}
+\doxysubsubsection{\texorpdfstring{input()}{input()}}
+{\footnotesize\ttfamily istream \& Optic\+\_\+\+Materials\+::input (\begin{DoxyParamCaption}\item[{istream \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overridden method for reading data into the collection from an input stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The input stream from which the data is to be read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the modified input stream. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_base}{Base}}.
+
+\Hypertarget{class_optic___materials_a0dfc05f98314c88d6b497c2bd0e5a7db}\label{class_optic___materials_a0dfc05f98314c88d6b497c2bd0e5a7db} 
+\index{Optic\_Materials@{Optic\_Materials}!print@{print}}
+\index{print@{print}!Optic\_Materials@{Optic\_Materials}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily ostream \& Optic\+\_\+\+Materials\+::print (\begin{DoxyParamCaption}\item[{ostream \&}]{output }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overridden method for printing the collection\textquotesingle{}s details to an output stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em output} & The output stream to which the collection\textquotesingle{}s data is to be written. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the modified output stream. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_base}{Base}}.
+
+\Hypertarget{class_optic___materials_a1e962fbf610006489e54d0aaa38f9f67}\label{class_optic___materials_a1e962fbf610006489e54d0aaa38f9f67} 
+\index{Optic\_Materials@{Optic\_Materials}!to\_json@{to\_json}}
+\index{to\_json@{to\_json}!Optic\_Materials@{Optic\_Materials}}
+\doxysubsubsection{\texorpdfstring{to\_json()}{to\_json()}}
+{\footnotesize\ttfamily void Optic\+\_\+\+Materials\+::to\+\_\+json (\begin{DoxyParamCaption}\item[{json \&}]{j }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overridden method for converting the collection\textquotesingle{}s state to JSON format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & JSON object to which the collection\textquotesingle{}s state is to be written. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_base}{Base}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+optic\+\_\+materials.\+h\item 
+optic\+\_\+materials.\+cpp\end{DoxyCompactItemize}

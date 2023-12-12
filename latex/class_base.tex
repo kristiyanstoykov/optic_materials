@@ -1,0 +1,77 @@
+\doxysection{Base Class Reference}
+\hypertarget{class_base}{}\label{class_base}\index{Base@{Base}}
+
+
+A base class providing an interface for serialization and deserialization as well as stream insertion and extraction.  
+
+
+
+
+{\ttfamily \#include $<$base.\+h$>$}
+
+Inheritance diagram for Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.712538cm]{class_base}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{class_base_a46ec4bff5babf2cbe6bd1b9550e70fd0}{operator$<$$<$}} (ostream \&output, const \mbox{\hyperlink{class_base}{Base}} \&base)
+\begin{DoxyCompactList}\small\item\em Overloads the \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator for outputting the \doxylink{class_base}{Base} object\textquotesingle{}s details to an output stream. \end{DoxyCompactList}\item 
+istream \& \mbox{\hyperlink{class_base_a6be9fd2157f633e752439913aabb8f11}{operator$>$$>$}} (istream \&input, \mbox{\hyperlink{class_base}{Base}} \&base)
+\begin{DoxyCompactList}\small\item\em Overloads the \texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} operator for reading data into a \doxylink{class_base}{Base} object from an input stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A base class providing an interface for serialization and deserialization as well as stream insertion and extraction. 
+
+This class defines a common interface for derived classes to implement custom behavior for printing to and reading from streams, and for converting to and from JSON format. 
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_base_a46ec4bff5babf2cbe6bd1b9550e70fd0}\label{class_base_a46ec4bff5babf2cbe6bd1b9550e70fd0} 
+\index{Base@{Base}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Base@{Base}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{output,  }\item[{const \mbox{\hyperlink{class_base}{Base}} \&}]{base }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overloads the \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator for outputting the \doxylink{class_base}{Base} object\textquotesingle{}s details to an output stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em output} & The output stream to which the data is to be written. \\
+\hline
+{\em base} & The \doxylink{class_base}{Base} object whose data is to be outputted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the modified output stream for chaining. 
+\end{DoxyReturn}
+\Hypertarget{class_base_a6be9fd2157f633e752439913aabb8f11}\label{class_base_a6be9fd2157f633e752439913aabb8f11} 
+\index{Base@{Base}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Base@{Base}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{istream \&}]{input,  }\item[{\mbox{\hyperlink{class_base}{Base}} \&}]{base }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overloads the \texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} operator for reading data into a \doxylink{class_base}{Base} object from an input stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The input stream from which the data is to be read. \\
+\hline
+{\em base} & The \doxylink{class_base}{Base} object where the read data is to be stored. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the modified input stream for chaining. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+base.\+h\end{DoxyCompactItemize}
