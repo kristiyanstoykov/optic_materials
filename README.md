@@ -13,7 +13,7 @@ Made with:
 1. [Installation](#installation)
 2. [Usage](#usage)
 3. [UML diagram](#uml-diagram)
-4. [Features](#features)
+4. [Classes](#classes)
    - [Base (base.h)](#base-baseh)
      - [Functions](#functions)
    - [Optic_Material (optic_material.h)](#optic_material-optic_materialh)
@@ -64,10 +64,10 @@ git clone https://github.com/kristiyanstoykov/optic_materials.git
 <p align="right">(<a href="#optic-materials">back to top</a>)</p>
 
 ## UML diagram
+
 ![UML diagram](/uml/uml.jpg)
 
-
-## Features
+## Classes
 
 ### **Base (base.h)**
 
