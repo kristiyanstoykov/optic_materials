@@ -1,13 +1,17 @@
 # Optic Materials
 
+Optic Materials is a course project for the Programming Languages subject.
+
+Made with:
+
 ![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 
 <!-- TABLE OF CONTENTS -->
+
 ## Contents
 
-1. [Description](#description)
-2. [Installation](#installation)
-3. [Usage](#usage)
+1. [Installation](#installation)
+2. [Usage](#usage)
    - [Base (base.h)](#base-baseh)
      - [Functions](#functions)
    - [Optic_Material (optic_material.h)](#optic_material-optic_materialh)
@@ -37,13 +41,7 @@
      - [Constructors](#constructors-6)
      - [Overrides from Base](#overrides-from-base-6)
    - [Main (main.cpp)](#main-maincpp)
-4. [Contact](#contact)
-
-## Description
-
-Optic Materials is a course project for the Programming Languages subject.
-
-<p align="right">(<a href="#optic-materials">back to top</a>)</p>
+3. [Contact](#contact)
 
 ## Installation
 
@@ -322,7 +320,6 @@ Extends the `Base` class. Manages a collection of `Supplier` objects with functi
 
 <p align="right">(<a href="#optic-materials">back to top</a>)</p>
 
-
 ## Contact
 
 ### Email:
@@ -332,7 +329,6 @@ Extends the `Base` class. Manages a collection of `Supplier` objects with functi
 <p align="right">(<a href="#optic-materials">back to top</a>)</p>
 
 ---
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
