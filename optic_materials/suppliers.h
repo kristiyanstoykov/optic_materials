@@ -54,6 +54,12 @@ public:
     int getSize() const;
 
     /**
+     * @brief Checks if collection is empty
+     * @return True if collection is empty, false otherwise
+     */
+    bool isEmpty();
+
+    /**
      * @brief Prints a concise one-line description of each supplier in the collection.
      */
     void print_on_one_line() const;
