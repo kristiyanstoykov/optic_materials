@@ -1,5 +1,12 @@
 #include "optic_materials.h"
 
+Optic_Materials::Optic_Materials() {}
+
+
+bool Optic_Materials::isEmpty() {
+    return this->optic_materials.empty();
+}
+
 // Method to add an supplier
 void Optic_Materials::addOpticMaterial(const Optic_Material& optic_material) {
     this->optic_materials.push_back(optic_material);

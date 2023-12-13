@@ -37,6 +37,10 @@ int Suppliers::getSize() const
     return (int) this->suppliers.size();
 }
 
+bool Suppliers::isEmpty() {
+    return this->suppliers.empty();
+}
+
 ostream& Suppliers::print(ostream& output) const {
     output << "Total Suppliers: " << this->suppliers.size() << "\n";
     for (const auto& supplier : this->suppliers) {
