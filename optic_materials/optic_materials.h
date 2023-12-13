@@ -26,7 +26,7 @@ public:
     /**
      * @brief Default constructor for Optic_Materials.
      */
-    Optic_Materials() = default;
+    Optic_Materials();
 
     /**
      * @brief Gets the number of optic materials in the collection.
@@ -52,6 +52,12 @@ public:
      * @return The Optic_Material object at the specified index.
      */
     Optic_Material getOpticMaterialByIndex(int index) const;
+
+    /**
+     * @brief Checks if collection is empty
+     * @return True if collection is empty, false otherwise
+     */
+    bool isEmpty();
 
     /**
      * @brief Overridden method for printing the collection's details to an output stream.
