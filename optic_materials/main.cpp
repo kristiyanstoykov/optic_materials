@@ -275,6 +275,16 @@ Optic_Material enter_material() {
 
 void enter_order(Orders& orders, Optic_Materials materials, Suppliers suppliers) {
 
+    if (materials.isEmpty()){
+        cout << "No marterials found! Add a material!\n";
+        return;
+    }
+
+    if (suppliers.isEmpty()) {
+        cout << "No suppliers found! Add a suppliers!\n";
+        return;
+    }
+
     orders.addOrder(Order());
 
     int order_id;
