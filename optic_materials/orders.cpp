@@ -4,12 +4,10 @@ Orders::Orders() {
     this->orders.push_back(Order());
 }
 
-// Method to add an order
 void Orders::addOrder(const Order& order) {
     this->orders.push_back(order);
 }
 
-// Method to get all orders
 vector<Order> Orders::getOrders() {
     return this->orders;
 }
@@ -19,7 +17,7 @@ void Orders::addIdToLastOrder(int id) {
         this->orders.back().setId(id);
     }
     else {
-        cerr << "There are no orders to add a material to.\n";
+        throw std::invalid_argument("There are no orders to add a material to.");
     }
 }
 
@@ -28,7 +26,7 @@ void Orders::addMaterialToLastOrder(const Optic_Material& material) {
         this->orders.back().addMaterial(material);
     }
     else {
-        cerr << "There are no orders to add a material to.\n";
+        throw std::invalid_argument("There are no orders to add a material to.");
     }
 }
 
@@ -37,7 +35,7 @@ void Orders::addSupplierToLastOrder(const Supplier& supplier) {
         this->orders.back().addSupplier(supplier);
     }
     else {
-        cerr << "There are no orders to add a suppler to.\n";
+        throw std::invalid_argument("There are no orders to add a suppler to.");
     }
 }
 
